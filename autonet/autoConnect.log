@@ -1,0 +1,440 @@
+2016-03-12T19:16:20.440Z - info: [3/12/2016, 8:16:20 PM] ################## INIT ###################
+2016-03-12T19:16:20.446Z - info: [3/12/2016, 8:16:20 PM REQUEST PARAM] {"_dc":1457810180445}
+2016-03-12T19:16:22.601Z - info: [3/12/2016, 8:16:22 PM ENDPOINT] https://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh
+2016-03-12T19:16:22.601Z - info: [3/12/2016, 8:16:22 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=329B680211E1D27D63E4E75991EE1DE2; Path=/connect; Secure"],"content-type":"text/html;charset=gbk","transfer-encoding":"chunked","date":"Sat, 12 Mar 2016 19:16:22 GMT","connection":"close"}
+2016-03-12T19:16:22.601Z - info: [3/12/2016, 8:16:22 PM NEW COOKIE] 0=JSESSIONID=329B680211E1D27D63E4E75991EE1DE2; Path=/connect; Secure
+2016-03-12T19:16:22.603Z - info: [3/12/2016, 8:16:22 PM] ################## MSG ###################
+2016-03-12T19:16:22.604Z - info: [3/12/2016, 8:16:22 PM REQUEST PARAM] {"act":0,"_dc":1457810182604}
+2016-03-12T19:16:24.600Z - info: [3/12/2016, 8:16:24 PM ENDPOINT] https://account.cuc.edu.cn/notice/msg.jsp
+2016-03-12T19:16:24.601Z - info: [3/12/2016, 8:16:24 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=1DC2078350176448553F92890F3C134A; Path=/; Secure"],"content-type":"text/html;charset=utf-8","content-length":"281","date":"Sat, 12 Mar 2016 19:16:24 GMT","connection":"close"}
+2016-03-12T19:16:24.601Z - info: [3/12/2016, 8:16:24 PM NEW COOKIE] 0=JSESSIONID=1DC2078350176448553F92890F3C134A; Path=/; Secure
+2016-03-12T19:16:24.602Z - info: [3/12/2016, 8:16:24 PM] ################## LOGIN ###################
+2016-03-12T19:16:24.603Z - info: [3/12/2016, 8:16:24 PM REQUEST PARAM] {"act":2,"userid":"201010013082x","passwd":"PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==","_dc":1457810184603}
+2016-03-12T19:16:24.603Z - info: [3/12/2016, 8:16:24 PM COOKIE SENT] JSESSIONID=329B680211E1D27D63E4E75991EE1DE2; JSESSIONID=1DC2078350176448553F92890F3C134A
+2016-03-12T19:16:26.690Z - info: [3/12/2016, 8:16:26 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_login.jsp
+2016-03-12T19:16:26.691Z - info: [3/12/2016, 8:16:26 PM BODY] {"success":false, "errno": -101, "msg":"用户不存在"}
+
+2016-03-12T19:16:26.691Z - info: [3/12/2016, 8:16:26 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"53","date":"Sat, 12 Mar 2016 19:16:26 GMT","connection":"close"}
+2016-03-12T19:16:26.692Z - info: [3/12/2016, 8:16:26 PM] ################## CONNECT ###################
+2016-03-12T19:16:26.692Z - info: [3/12/2016, 8:16:26 PM REQUEST PARAM] {"act":4,"_dc":1457810186692}
+2016-03-12T19:16:26.693Z - info: [3/12/2016, 8:16:26 PM COOKIE SENT] JSESSIONID=329B680211E1D27D63E4E75991EE1DE2; JSESSIONID=1DC2078350176448553F92890F3C134A
+2016-03-12T19:16:28.735Z - info: [3/12/2016, 8:16:28 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:16:28.735Z - info: [3/12/2016, 8:16:28 PM BODY] {"success":false, "errno": -5, "msg":"登录超时", "ts":0}
+
+2016-03-12T19:16:28.736Z - info: [3/12/2016, 8:16:28 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"57","date":"Sat, 12 Mar 2016 19:16:28 GMT","connection":"close"}
+2016-03-12T19:16:28.736Z - info: [3/12/2016, 8:16:28 PM] ################## ALIVE ###################
+2016-03-12T19:16:28.737Z - info: [3/12/2016, 8:16:28 PM REQUEST PARAM] {"act":6,"_dc":1457810188737}
+2016-03-12T19:16:28.737Z - info: [3/12/2016, 8:16:28 PM COOKIE SENT] JSESSIONID=329B680211E1D27D63E4E75991EE1DE2; JSESSIONID=1DC2078350176448553F92890F3C134A
+2016-03-12T19:16:30.782Z - info: [3/12/2016, 8:16:30 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:16:30.783Z - info: [3/12/2016, 8:16:30 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"87","date":"Sat, 12 Mar 2016 19:16:30 GMT","connection":"close"}
+2016-03-12T19:16:30.784Z - debug: ALIVE RESPONSE BODY {"success":true, 
+"keeper":{"ic_type":223, "ip_status":1}, 
+"hasLogin":false, 
+"ts":0}
+
+2016-03-12T19:16:30.784Z - info: [3/12/2016, 8:16:30 PM ALIVE] reconnect
+2016-03-12T19:16:30.784Z - info: [3/12/2016, 8:16:30 PM] ################## INIT ###################
+2016-03-12T19:16:30.785Z - info: [3/12/2016, 8:16:30 PM REQUEST PARAM] {"_dc":1457810190785}
+2016-03-12T19:16:32.838Z - info: [3/12/2016, 8:16:32 PM ENDPOINT] https://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh
+2016-03-12T19:16:32.839Z - info: [3/12/2016, 8:16:32 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=A6118992A6F2AE785B14D392D397AD43; Path=/connect; Secure"],"content-type":"text/html;charset=gbk","transfer-encoding":"chunked","date":"Sat, 12 Mar 2016 19:16:32 GMT","connection":"close"}
+2016-03-12T19:16:32.839Z - info: [3/12/2016, 8:16:32 PM NEW COOKIE] 0=JSESSIONID=A6118992A6F2AE785B14D392D397AD43; Path=/connect; Secure
+2016-03-12T19:16:32.840Z - info: [3/12/2016, 8:16:32 PM] ################## MSG ###################
+2016-03-12T19:16:32.840Z - info: [3/12/2016, 8:16:32 PM REQUEST PARAM] {"act":0,"_dc":1457810192840}
+2016-03-12T19:16:34.841Z - info: [3/12/2016, 8:16:34 PM ENDPOINT] https://account.cuc.edu.cn/notice/msg.jsp
+2016-03-12T19:16:34.841Z - info: [3/12/2016, 8:16:34 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=630A39C5B702FB6C9C1E1173D2E598CE; Path=/; Secure"],"content-type":"text/html;charset=utf-8","content-length":"281","date":"Sat, 12 Mar 2016 19:16:34 GMT","connection":"close"}
+2016-03-12T19:16:34.842Z - info: [3/12/2016, 8:16:34 PM NEW COOKIE] 0=JSESSIONID=630A39C5B702FB6C9C1E1173D2E598CE; Path=/; Secure
+2016-03-12T19:16:34.844Z - info: [3/12/2016, 8:16:34 PM] ################## LOGIN ###################
+2016-03-12T19:16:34.844Z - info: [3/12/2016, 8:16:34 PM REQUEST PARAM] {"act":2,"userid":"201010013082x","passwd":"PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==","_dc":1457810194844}
+2016-03-12T19:16:34.845Z - info: [3/12/2016, 8:16:34 PM COOKIE SENT] JSESSIONID=A6118992A6F2AE785B14D392D397AD43; JSESSIONID=630A39C5B702FB6C9C1E1173D2E598CE
+2016-03-12T19:16:36.927Z - info: [3/12/2016, 8:16:36 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_login.jsp
+2016-03-12T19:16:36.927Z - info: [3/12/2016, 8:16:36 PM BODY] {"success":false, "errno": -101, "msg":"用户不存在"}
+
+2016-03-12T19:16:36.928Z - info: [3/12/2016, 8:16:36 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"53","date":"Sat, 12 Mar 2016 19:16:36 GMT","connection":"close"}
+2016-03-12T19:16:36.929Z - info: [3/12/2016, 8:16:36 PM] ################## CONNECT ###################
+2016-03-12T19:16:36.930Z - info: [3/12/2016, 8:16:36 PM REQUEST PARAM] {"act":4,"_dc":1457810196929}
+2016-03-12T19:16:36.930Z - info: [3/12/2016, 8:16:36 PM COOKIE SENT] JSESSIONID=A6118992A6F2AE785B14D392D397AD43; JSESSIONID=630A39C5B702FB6C9C1E1173D2E598CE
+2016-03-12T19:16:38.975Z - info: [3/12/2016, 8:16:38 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:16:38.977Z - info: [3/12/2016, 8:16:38 PM BODY] {"success":false, "errno": -5, "msg":"登录超时", "ts":0}
+
+2016-03-12T19:16:38.978Z - info: [3/12/2016, 8:16:38 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"57","date":"Sat, 12 Mar 2016 19:16:38 GMT","connection":"close"}
+2016-03-12T19:16:38.979Z - info: [3/12/2016, 8:16:38 PM] ################## ALIVE ###################
+2016-03-12T19:16:38.979Z - info: [3/12/2016, 8:16:38 PM REQUEST PARAM] {"act":6,"_dc":1457810198979}
+2016-03-12T19:16:38.980Z - info: [3/12/2016, 8:16:38 PM COOKIE SENT] JSESSIONID=A6118992A6F2AE785B14D392D397AD43; JSESSIONID=630A39C5B702FB6C9C1E1173D2E598CE
+2016-03-12T19:16:41.023Z - info: [3/12/2016, 8:16:41 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:16:41.023Z - info: [3/12/2016, 8:16:41 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"87","date":"Sat, 12 Mar 2016 19:16:40 GMT","connection":"close"}
+2016-03-12T19:16:41.024Z - debug: ALIVE RESPONSE BODY {"success":true, 
+"keeper":{"ic_type":223, "ip_status":1}, 
+"hasLogin":false, 
+"ts":0}
+
+2016-03-12T19:16:41.024Z - info: [3/12/2016, 8:16:41 PM ALIVE] reconnect
+2016-03-12T19:16:41.026Z - info: [3/12/2016, 8:16:41 PM] ################## INIT ###################
+2016-03-12T19:16:41.026Z - info: [3/12/2016, 8:16:41 PM REQUEST PARAM] {"_dc":1457810201026}
+2016-03-12T19:16:43.072Z - info: [3/12/2016, 8:16:43 PM ENDPOINT] https://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh
+2016-03-12T19:16:43.073Z - info: [3/12/2016, 8:16:43 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=D33B41F252AFA81C325869B352C1090D; Path=/connect; Secure"],"content-type":"text/html;charset=gbk","transfer-encoding":"chunked","date":"Sat, 12 Mar 2016 19:16:42 GMT","connection":"close"}
+2016-03-12T19:16:43.075Z - info: [3/12/2016, 8:16:43 PM NEW COOKIE] 0=JSESSIONID=D33B41F252AFA81C325869B352C1090D; Path=/connect; Secure
+2016-03-12T19:16:43.076Z - info: [3/12/2016, 8:16:43 PM] ################## MSG ###################
+2016-03-12T19:16:43.076Z - info: [3/12/2016, 8:16:43 PM REQUEST PARAM] {"act":0,"_dc":1457810203076}
+2016-03-12T19:16:45.119Z - info: [3/12/2016, 8:16:45 PM ENDPOINT] https://account.cuc.edu.cn/notice/msg.jsp
+2016-03-12T19:16:45.120Z - info: [3/12/2016, 8:16:45 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=9D11DF2E19E71F0CFFCF25C9C5385F08; Path=/; Secure"],"content-type":"text/html;charset=utf-8","content-length":"281","date":"Sat, 12 Mar 2016 19:16:44 GMT","connection":"close"}
+2016-03-12T19:16:45.123Z - info: [3/12/2016, 8:16:45 PM NEW COOKIE] 0=JSESSIONID=9D11DF2E19E71F0CFFCF25C9C5385F08; Path=/; Secure
+2016-03-12T19:16:45.123Z - info: [3/12/2016, 8:16:45 PM] ################## LOGIN ###################
+2016-03-12T19:16:45.124Z - info: [3/12/2016, 8:16:45 PM REQUEST PARAM] {"act":2,"userid":"201010013082x","passwd":"PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==","_dc":1457810205123}
+2016-03-12T19:16:45.124Z - info: [3/12/2016, 8:16:45 PM COOKIE SENT] JSESSIONID=D33B41F252AFA81C325869B352C1090D; JSESSIONID=9D11DF2E19E71F0CFFCF25C9C5385F08
+2016-03-12T19:16:47.269Z - info: [3/12/2016, 8:16:47 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_login.jsp
+2016-03-12T19:16:47.270Z - info: [3/12/2016, 8:16:47 PM BODY] {"success":false, "errno": -101, "msg":"用户不存在"}
+
+2016-03-12T19:16:47.270Z - info: [3/12/2016, 8:16:47 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"53","date":"Sat, 12 Mar 2016 19:16:46 GMT","connection":"close"}
+2016-03-12T19:16:47.271Z - info: [3/12/2016, 8:16:47 PM] ################## CONNECT ###################
+2016-03-12T19:16:47.271Z - info: [3/12/2016, 8:16:47 PM REQUEST PARAM] {"act":4,"_dc":1457810207271}
+2016-03-12T19:16:47.272Z - info: [3/12/2016, 8:16:47 PM COOKIE SENT] JSESSIONID=D33B41F252AFA81C325869B352C1090D; JSESSIONID=9D11DF2E19E71F0CFFCF25C9C5385F08
+2016-03-12T19:16:49.421Z - info: [3/12/2016, 8:16:49 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:16:49.422Z - info: [3/12/2016, 8:16:49 PM BODY] {"success":false, "errno": -5, "msg":"登录超时", "ts":0}
+
+2016-03-12T19:16:49.423Z - info: [3/12/2016, 8:16:49 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"57","date":"Sat, 12 Mar 2016 19:16:48 GMT","connection":"close"}
+2016-03-12T19:16:49.423Z - info: [3/12/2016, 8:16:49 PM] ################## ALIVE ###################
+2016-03-12T19:16:49.423Z - info: [3/12/2016, 8:16:49 PM REQUEST PARAM] {"act":6,"_dc":1457810209423}
+2016-03-12T19:16:49.424Z - info: [3/12/2016, 8:16:49 PM COOKIE SENT] JSESSIONID=D33B41F252AFA81C325869B352C1090D; JSESSIONID=9D11DF2E19E71F0CFFCF25C9C5385F08
+2016-03-12T19:16:51.467Z - info: [3/12/2016, 8:16:51 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:16:51.468Z - info: [3/12/2016, 8:16:51 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"87","date":"Sat, 12 Mar 2016 19:16:51 GMT","connection":"close"}
+2016-03-12T19:16:51.468Z - debug: ALIVE RESPONSE BODY {"success":true, 
+"keeper":{"ic_type":223, "ip_status":1}, 
+"hasLogin":false, 
+"ts":0}
+
+2016-03-12T19:16:51.469Z - info: [3/12/2016, 8:16:51 PM ALIVE] reconnect
+2016-03-12T19:16:51.469Z - info: [3/12/2016, 8:16:51 PM] ################## INIT ###################
+2016-03-12T19:16:51.469Z - info: [3/12/2016, 8:16:51 PM REQUEST PARAM] {"_dc":1457810211469}
+2016-03-12T19:16:53.442Z - info: [3/12/2016, 8:16:53 PM ENDPOINT] https://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh
+2016-03-12T19:16:53.443Z - info: [3/12/2016, 8:16:53 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=6064FB99405366E529AD6640C8D73E4F; Path=/connect; Secure"],"content-type":"text/html;charset=gbk","transfer-encoding":"chunked","date":"Sat, 12 Mar 2016 19:16:53 GMT","connection":"close"}
+2016-03-12T19:16:53.443Z - info: [3/12/2016, 8:16:53 PM NEW COOKIE] 0=JSESSIONID=6064FB99405366E529AD6640C8D73E4F; Path=/connect; Secure
+2016-03-12T19:16:53.444Z - info: [3/12/2016, 8:16:53 PM] ################## MSG ###################
+2016-03-12T19:16:53.444Z - info: [3/12/2016, 8:16:53 PM REQUEST PARAM] {"act":0,"_dc":1457810213444}
+2016-03-12T19:16:55.463Z - info: [3/12/2016, 8:16:55 PM ENDPOINT] https://account.cuc.edu.cn/notice/msg.jsp
+2016-03-12T19:16:55.463Z - info: [3/12/2016, 8:16:55 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=410D5F42F84D63BD9049296DD547CBD2; Path=/; Secure"],"content-type":"text/html;charset=utf-8","content-length":"281","date":"Sat, 12 Mar 2016 19:16:55 GMT","connection":"close"}
+2016-03-12T19:16:55.464Z - info: [3/12/2016, 8:16:55 PM NEW COOKIE] 0=JSESSIONID=410D5F42F84D63BD9049296DD547CBD2; Path=/; Secure
+2016-03-12T19:16:55.464Z - info: [3/12/2016, 8:16:55 PM] ################## LOGIN ###################
+2016-03-12T19:16:55.465Z - info: [3/12/2016, 8:16:55 PM REQUEST PARAM] {"act":2,"userid":"201010013082x","passwd":"PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==","_dc":1457810215464}
+2016-03-12T19:16:55.465Z - info: [3/12/2016, 8:16:55 PM COOKIE SENT] JSESSIONID=6064FB99405366E529AD6640C8D73E4F; JSESSIONID=410D5F42F84D63BD9049296DD547CBD2
+2016-03-12T19:16:57.510Z - info: [3/12/2016, 8:16:57 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_login.jsp
+2016-03-12T19:16:57.510Z - info: [3/12/2016, 8:16:57 PM BODY] {"success":false, "errno": -101, "msg":"用户不存在"}
+
+2016-03-12T19:16:57.511Z - info: [3/12/2016, 8:16:57 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"53","date":"Sat, 12 Mar 2016 19:16:57 GMT","connection":"close"}
+2016-03-12T19:16:57.511Z - info: [3/12/2016, 8:16:57 PM] ################## CONNECT ###################
+2016-03-12T19:16:57.512Z - info: [3/12/2016, 8:16:57 PM REQUEST PARAM] {"act":4,"_dc":1457810217511}
+2016-03-12T19:16:57.512Z - info: [3/12/2016, 8:16:57 PM COOKIE SENT] JSESSIONID=6064FB99405366E529AD6640C8D73E4F; JSESSIONID=410D5F42F84D63BD9049296DD547CBD2
+2016-03-12T19:16:59.558Z - info: [3/12/2016, 8:16:59 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:16:59.558Z - info: [3/12/2016, 8:16:59 PM BODY] {"success":false, "errno": -5, "msg":"登录超时", "ts":0}
+
+2016-03-12T19:16:59.559Z - info: [3/12/2016, 8:16:59 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"57","date":"Sat, 12 Mar 2016 19:16:59 GMT","connection":"close"}
+2016-03-12T19:16:59.560Z - info: [3/12/2016, 8:16:59 PM] ################## ALIVE ###################
+2016-03-12T19:16:59.561Z - info: [3/12/2016, 8:16:59 PM REQUEST PARAM] {"act":6,"_dc":1457810219560}
+2016-03-12T19:16:59.561Z - info: [3/12/2016, 8:16:59 PM COOKIE SENT] JSESSIONID=6064FB99405366E529AD6640C8D73E4F; JSESSIONID=410D5F42F84D63BD9049296DD547CBD2
+2016-03-12T19:17:01.709Z - info: [3/12/2016, 8:17:01 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:17:01.710Z - info: [3/12/2016, 8:17:01 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"87","date":"Sat, 12 Mar 2016 19:17:01 GMT","connection":"close"}
+2016-03-12T19:17:01.710Z - debug: ALIVE RESPONSE BODY {"success":true, 
+"keeper":{"ic_type":223, "ip_status":1}, 
+"hasLogin":false, 
+"ts":0}
+
+2016-03-12T19:17:01.710Z - info: [3/12/2016, 8:17:01 PM ALIVE] reconnect
+2016-03-12T19:17:01.711Z - info: [3/12/2016, 8:17:01 PM] ################## INIT ###################
+2016-03-12T19:17:01.712Z - info: [3/12/2016, 8:17:01 PM REQUEST PARAM] {"_dc":1457810221711}
+2016-03-12T19:17:03.757Z - info: [3/12/2016, 8:17:03 PM ENDPOINT] https://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh
+2016-03-12T19:17:03.758Z - info: [3/12/2016, 8:17:03 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=515360328F17266815A4311DB9F09D80; Path=/connect; Secure"],"content-type":"text/html;charset=gbk","transfer-encoding":"chunked","date":"Sat, 12 Mar 2016 19:17:03 GMT","connection":"close"}
+2016-03-12T19:17:03.758Z - info: [3/12/2016, 8:17:03 PM NEW COOKIE] 0=JSESSIONID=515360328F17266815A4311DB9F09D80; Path=/connect; Secure
+2016-03-12T19:17:03.759Z - info: [3/12/2016, 8:17:03 PM] ################## MSG ###################
+2016-03-12T19:17:03.759Z - info: [3/12/2016, 8:17:03 PM REQUEST PARAM] {"act":0,"_dc":1457810223759}
+2016-03-12T19:17:05.906Z - info: [3/12/2016, 8:17:05 PM ENDPOINT] https://account.cuc.edu.cn/notice/msg.jsp
+2016-03-12T19:17:05.907Z - info: [3/12/2016, 8:17:05 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=B363DC708571768FBDF1EC6607065EF8; Path=/; Secure"],"content-type":"text/html;charset=utf-8","content-length":"281","date":"Sat, 12 Mar 2016 19:17:05 GMT","connection":"close"}
+2016-03-12T19:17:05.907Z - info: [3/12/2016, 8:17:05 PM NEW COOKIE] 0=JSESSIONID=B363DC708571768FBDF1EC6607065EF8; Path=/; Secure
+2016-03-12T19:17:05.908Z - info: [3/12/2016, 8:17:05 PM] ################## LOGIN ###################
+2016-03-12T19:17:05.912Z - info: [3/12/2016, 8:17:05 PM REQUEST PARAM] {"act":2,"userid":"201010013082x","passwd":"PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==","_dc":1457810225908}
+2016-03-12T19:17:05.913Z - info: [3/12/2016, 8:17:05 PM COOKIE SENT] JSESSIONID=515360328F17266815A4311DB9F09D80; JSESSIONID=B363DC708571768FBDF1EC6607065EF8
+2016-03-12T19:17:08.056Z - info: [3/12/2016, 8:17:08 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_login.jsp
+2016-03-12T19:17:08.057Z - info: [3/12/2016, 8:17:08 PM BODY] {"success":false, "errno": -101, "msg":"用户不存在"}
+
+2016-03-12T19:17:08.058Z - info: [3/12/2016, 8:17:08 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"53","date":"Sat, 12 Mar 2016 19:17:07 GMT","connection":"close"}
+2016-03-12T19:17:08.060Z - info: [3/12/2016, 8:17:08 PM] ################## CONNECT ###################
+2016-03-12T19:17:08.061Z - info: [3/12/2016, 8:17:08 PM REQUEST PARAM] {"act":4,"_dc":1457810228060}
+2016-03-12T19:17:08.062Z - info: [3/12/2016, 8:17:08 PM COOKIE SENT] JSESSIONID=515360328F17266815A4311DB9F09D80; JSESSIONID=B363DC708571768FBDF1EC6607065EF8
+2016-03-12T19:17:10.208Z - info: [3/12/2016, 8:17:10 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:17:10.210Z - info: [3/12/2016, 8:17:10 PM BODY] {"success":false, "errno": -5, "msg":"登录超时", "ts":0}
+
+2016-03-12T19:17:10.210Z - info: [3/12/2016, 8:17:10 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"57","date":"Sat, 12 Mar 2016 19:17:09 GMT","connection":"close"}
+2016-03-12T19:17:10.210Z - info: [3/12/2016, 8:17:10 PM] ################## ALIVE ###################
+2016-03-12T19:17:10.211Z - info: [3/12/2016, 8:17:10 PM REQUEST PARAM] {"act":6,"_dc":1457810230211}
+2016-03-12T19:17:10.211Z - info: [3/12/2016, 8:17:10 PM COOKIE SENT] JSESSIONID=515360328F17266815A4311DB9F09D80; JSESSIONID=B363DC708571768FBDF1EC6607065EF8
+2016-03-12T19:17:12.255Z - info: [3/12/2016, 8:17:12 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:17:12.256Z - info: [3/12/2016, 8:17:12 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"87","date":"Sat, 12 Mar 2016 19:17:11 GMT","connection":"close"}
+2016-03-12T19:17:12.256Z - debug: ALIVE RESPONSE BODY {"success":true, 
+"keeper":{"ic_type":223, "ip_status":1}, 
+"hasLogin":false, 
+"ts":0}
+
+2016-03-12T19:17:12.256Z - info: [3/12/2016, 8:17:12 PM ALIVE] reconnect
+2016-03-12T19:17:12.257Z - info: [3/12/2016, 8:17:12 PM] ################## INIT ###################
+2016-03-12T19:17:12.257Z - info: [3/12/2016, 8:17:12 PM REQUEST PARAM] {"_dc":1457810232257}
+2016-03-12T19:17:14.305Z - info: [3/12/2016, 8:17:14 PM ENDPOINT] https://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh
+2016-03-12T19:17:14.306Z - info: [3/12/2016, 8:17:14 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=EF3F06A35F601A58CB83CC4B2ED1E87D; Path=/connect; Secure"],"content-type":"text/html;charset=gbk","transfer-encoding":"chunked","date":"Sat, 12 Mar 2016 19:17:13 GMT","connection":"close"}
+2016-03-12T19:17:14.306Z - info: [3/12/2016, 8:17:14 PM NEW COOKIE] 0=JSESSIONID=EF3F06A35F601A58CB83CC4B2ED1E87D; Path=/connect; Secure
+2016-03-12T19:17:14.307Z - info: [3/12/2016, 8:17:14 PM] ################## MSG ###################
+2016-03-12T19:17:14.307Z - info: [3/12/2016, 8:17:14 PM REQUEST PARAM] {"act":0,"_dc":1457810234307}
+2016-03-12T19:17:16.354Z - info: [3/12/2016, 8:17:16 PM ENDPOINT] https://account.cuc.edu.cn/notice/msg.jsp
+2016-03-12T19:17:16.354Z - info: [3/12/2016, 8:17:16 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=C253B71536FFD98246B003C0A516A579; Path=/; Secure"],"content-type":"text/html;charset=utf-8","content-length":"281","date":"Sat, 12 Mar 2016 19:17:15 GMT","connection":"close"}
+2016-03-12T19:17:16.355Z - info: [3/12/2016, 8:17:16 PM NEW COOKIE] 0=JSESSIONID=C253B71536FFD98246B003C0A516A579; Path=/; Secure
+2016-03-12T19:17:16.355Z - info: [3/12/2016, 8:17:16 PM] ################## LOGIN ###################
+2016-03-12T19:17:16.356Z - info: [3/12/2016, 8:17:16 PM REQUEST PARAM] {"act":2,"userid":"201010013082x","passwd":"PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==","_dc":1457810236356}
+2016-03-12T19:17:16.356Z - info: [3/12/2016, 8:17:16 PM COOKIE SENT] JSESSIONID=EF3F06A35F601A58CB83CC4B2ED1E87D; JSESSIONID=C253B71536FFD98246B003C0A516A579
+2016-03-12T19:17:18.400Z - info: [3/12/2016, 8:17:18 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_login.jsp
+2016-03-12T19:17:18.401Z - info: [3/12/2016, 8:17:18 PM BODY] {"success":false, "errno": -101, "msg":"用户不存在"}
+
+2016-03-12T19:17:18.401Z - info: [3/12/2016, 8:17:18 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"53","date":"Sat, 12 Mar 2016 19:17:17 GMT","connection":"close"}
+2016-03-12T19:17:18.402Z - info: [3/12/2016, 8:17:18 PM] ################## CONNECT ###################
+2016-03-12T19:17:18.402Z - info: [3/12/2016, 8:17:18 PM REQUEST PARAM] {"act":4,"_dc":1457810238402}
+2016-03-12T19:17:18.403Z - info: [3/12/2016, 8:17:18 PM COOKIE SENT] JSESSIONID=EF3F06A35F601A58CB83CC4B2ED1E87D; JSESSIONID=C253B71536FFD98246B003C0A516A579
+2016-03-12T19:17:20.447Z - info: [3/12/2016, 8:17:20 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:17:20.447Z - info: [3/12/2016, 8:17:20 PM BODY] {"success":false, "errno": -5, "msg":"登录超时", "ts":0}
+
+2016-03-12T19:17:20.448Z - info: [3/12/2016, 8:17:20 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"57","date":"Sat, 12 Mar 2016 19:17:19 GMT","connection":"close"}
+2016-03-12T19:17:20.448Z - info: [3/12/2016, 8:17:20 PM] ################## ALIVE ###################
+2016-03-12T19:17:20.449Z - info: [3/12/2016, 8:17:20 PM REQUEST PARAM] {"act":6,"_dc":1457810240449}
+2016-03-12T19:17:20.450Z - info: [3/12/2016, 8:17:20 PM COOKIE SENT] JSESSIONID=EF3F06A35F601A58CB83CC4B2ED1E87D; JSESSIONID=C253B71536FFD98246B003C0A516A579
+2016-03-12T19:17:22.495Z - info: [3/12/2016, 8:17:22 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:17:22.498Z - info: [3/12/2016, 8:17:22 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"87","date":"Sat, 12 Mar 2016 19:17:21 GMT","connection":"close"}
+2016-03-12T19:17:22.499Z - debug: ALIVE RESPONSE BODY {"success":true, 
+"keeper":{"ic_type":223, "ip_status":1}, 
+"hasLogin":false, 
+"ts":0}
+
+2016-03-12T19:17:22.499Z - info: [3/12/2016, 8:17:22 PM ALIVE] reconnect
+2016-03-12T19:17:22.500Z - info: [3/12/2016, 8:17:22 PM] ################## INIT ###################
+2016-03-12T19:17:22.501Z - info: [3/12/2016, 8:17:22 PM REQUEST PARAM] {"_dc":1457810242500}
+2016-03-12T19:17:24.506Z - info: [3/12/2016, 8:17:24 PM ENDPOINT] https://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh
+2016-03-12T19:17:24.506Z - info: [3/12/2016, 8:17:24 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=99CE7659AE36D1D2DABFFE5DA4CD2A06; Path=/connect; Secure"],"content-type":"text/html;charset=gbk","transfer-encoding":"chunked","date":"Sat, 12 Mar 2016 19:17:23 GMT","connection":"close"}
+2016-03-12T19:17:24.507Z - info: [3/12/2016, 8:17:24 PM NEW COOKIE] 0=JSESSIONID=99CE7659AE36D1D2DABFFE5DA4CD2A06; Path=/connect; Secure
+2016-03-12T19:17:24.507Z - info: [3/12/2016, 8:17:24 PM] ################## MSG ###################
+2016-03-12T19:17:24.508Z - info: [3/12/2016, 8:17:24 PM REQUEST PARAM] {"act":0,"_dc":1457810244507}
+2016-03-12T19:17:26.591Z - info: [3/12/2016, 8:17:26 PM ENDPOINT] https://account.cuc.edu.cn/notice/msg.jsp
+2016-03-12T19:17:26.592Z - info: [3/12/2016, 8:17:26 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=6428D0F49F744108A05E84BBC584E26E; Path=/; Secure"],"content-type":"text/html;charset=utf-8","content-length":"281","date":"Sat, 12 Mar 2016 19:17:25 GMT","connection":"close"}
+2016-03-12T19:17:26.593Z - info: [3/12/2016, 8:17:26 PM NEW COOKIE] 0=JSESSIONID=6428D0F49F744108A05E84BBC584E26E; Path=/; Secure
+2016-03-12T19:17:26.596Z - info: [3/12/2016, 8:17:26 PM] ################## LOGIN ###################
+2016-03-12T19:17:26.596Z - info: [3/12/2016, 8:17:26 PM REQUEST PARAM] {"act":2,"userid":"201010013082x","passwd":"PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==","_dc":1457810246596}
+2016-03-12T19:17:26.597Z - info: [3/12/2016, 8:17:26 PM COOKIE SENT] JSESSIONID=99CE7659AE36D1D2DABFFE5DA4CD2A06; JSESSIONID=6428D0F49F744108A05E84BBC584E26E
+2016-03-12T19:17:28.845Z - info: [3/12/2016, 8:17:28 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_login.jsp
+2016-03-12T19:17:28.846Z - info: [3/12/2016, 8:17:28 PM BODY] {"success":false, "errno": -101, "msg":"用户不存在"}
+
+2016-03-12T19:17:28.846Z - info: [3/12/2016, 8:17:28 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"53","date":"Sat, 12 Mar 2016 19:17:27 GMT","connection":"close"}
+2016-03-12T19:17:28.846Z - info: [3/12/2016, 8:17:28 PM] ################## CONNECT ###################
+2016-03-12T19:17:28.847Z - info: [3/12/2016, 8:17:28 PM REQUEST PARAM] {"act":4,"_dc":1457810248847}
+2016-03-12T19:17:28.847Z - info: [3/12/2016, 8:17:28 PM COOKIE SENT] JSESSIONID=99CE7659AE36D1D2DABFFE5DA4CD2A06; JSESSIONID=6428D0F49F744108A05E84BBC584E26E
+2016-03-12T19:17:31.303Z - info: [3/12/2016, 8:17:31 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:17:31.303Z - info: [3/12/2016, 8:17:31 PM BODY] {"success":false, "errno": -5, "msg":"登录超时", "ts":0}
+
+2016-03-12T19:17:31.304Z - info: [3/12/2016, 8:17:31 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"57","date":"Sat, 12 Mar 2016 19:17:30 GMT","connection":"close"}
+2016-03-12T19:17:31.304Z - info: [3/12/2016, 8:17:31 PM] ################## ALIVE ###################
+2016-03-12T19:17:31.304Z - info: [3/12/2016, 8:17:31 PM REQUEST PARAM] {"act":6,"_dc":1457810251304}
+2016-03-12T19:17:31.305Z - info: [3/12/2016, 8:17:31 PM COOKIE SENT] JSESSIONID=99CE7659AE36D1D2DABFFE5DA4CD2A06; JSESSIONID=6428D0F49F744108A05E84BBC584E26E
+2016-03-12T19:17:33.863Z - info: [3/12/2016, 8:17:33 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:17:33.863Z - info: [3/12/2016, 8:17:33 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"87","date":"Sat, 12 Mar 2016 19:17:33 GMT","connection":"close"}
+2016-03-12T19:17:33.864Z - debug: ALIVE RESPONSE BODY {"success":true, 
+"keeper":{"ic_type":223, "ip_status":1}, 
+"hasLogin":false, 
+"ts":0}
+
+2016-03-12T19:17:33.864Z - info: [3/12/2016, 8:17:33 PM ALIVE] reconnect
+2016-03-12T19:17:33.864Z - info: [3/12/2016, 8:17:33 PM] ################## INIT ###################
+2016-03-12T19:17:33.864Z - info: [3/12/2016, 8:17:33 PM REQUEST PARAM] {"_dc":1457810253864}
+2016-03-12T19:17:36.628Z - info: [3/12/2016, 8:17:36 PM ENDPOINT] https://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh
+2016-03-12T19:17:36.628Z - info: [3/12/2016, 8:17:36 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=99CA66F5038B31E905C9AD02DE1B5ED5; Path=/connect; Secure"],"content-type":"text/html;charset=gbk","transfer-encoding":"chunked","date":"Sat, 12 Mar 2016 19:17:36 GMT","connection":"close"}
+2016-03-12T19:17:36.628Z - info: [3/12/2016, 8:17:36 PM NEW COOKIE] 0=JSESSIONID=99CA66F5038B31E905C9AD02DE1B5ED5; Path=/connect; Secure
+2016-03-12T19:17:36.629Z - info: [3/12/2016, 8:17:36 PM] ################## MSG ###################
+2016-03-12T19:17:36.629Z - info: [3/12/2016, 8:17:36 PM REQUEST PARAM] {"act":0,"_dc":1457810256629}
+2016-03-12T19:17:39.903Z - info: [3/12/2016, 8:17:39 PM ENDPOINT] https://account.cuc.edu.cn/notice/msg.jsp
+2016-03-12T19:17:39.904Z - info: [3/12/2016, 8:17:39 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=D4A19F9E0C5A14738AA591F86121F3AF; Path=/; Secure"],"content-type":"text/html;charset=utf-8","content-length":"281","date":"Sat, 12 Mar 2016 19:17:39 GMT","connection":"close"}
+2016-03-12T19:17:39.904Z - info: [3/12/2016, 8:17:39 PM NEW COOKIE] 0=JSESSIONID=D4A19F9E0C5A14738AA591F86121F3AF; Path=/; Secure
+2016-03-12T19:17:39.905Z - info: [3/12/2016, 8:17:39 PM] ################## LOGIN ###################
+2016-03-12T19:17:39.905Z - info: [3/12/2016, 8:17:39 PM REQUEST PARAM] {"act":2,"userid":"201010013082x","passwd":"PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==","_dc":1457810259905}
+2016-03-12T19:17:39.905Z - info: [3/12/2016, 8:17:39 PM COOKIE SENT] JSESSIONID=99CA66F5038B31E905C9AD02DE1B5ED5; JSESSIONID=D4A19F9E0C5A14738AA591F86121F3AF
+2016-03-12T19:17:44.410Z - info: [3/12/2016, 8:17:44 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_login.jsp
+2016-03-12T19:17:44.410Z - info: [3/12/2016, 8:17:44 PM BODY] {"success":false, "errno": -101, "msg":"用户不存在"}
+
+2016-03-12T19:17:44.411Z - info: [3/12/2016, 8:17:44 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"53","date":"Sat, 12 Mar 2016 19:17:43 GMT","connection":"close"}
+2016-03-12T19:17:44.411Z - info: [3/12/2016, 8:17:44 PM] ################## CONNECT ###################
+2016-03-12T19:17:44.412Z - info: [3/12/2016, 8:17:44 PM REQUEST PARAM] {"act":4,"_dc":1457810264411}
+2016-03-12T19:17:44.412Z - info: [3/12/2016, 8:17:44 PM COOKIE SENT] JSESSIONID=99CA66F5038B31E905C9AD02DE1B5ED5; JSESSIONID=D4A19F9E0C5A14738AA591F86121F3AF
+2016-03-12T19:17:48.403Z - info: [3/12/2016, 8:17:48 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:17:48.403Z - info: [3/12/2016, 8:17:48 PM BODY] {"success":false, "errno": -5, "msg":"登录超时", "ts":0}
+
+2016-03-12T19:17:48.404Z - info: [3/12/2016, 8:17:48 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"57","date":"Sat, 12 Mar 2016 19:17:47 GMT","connection":"close"}
+2016-03-12T19:17:48.405Z - info: [3/12/2016, 8:17:48 PM] ################## ALIVE ###################
+2016-03-12T19:17:48.405Z - info: [3/12/2016, 8:17:48 PM REQUEST PARAM] {"act":6,"_dc":1457810268405}
+2016-03-12T19:17:48.406Z - info: [3/12/2016, 8:17:48 PM COOKIE SENT] JSESSIONID=99CA66F5038B31E905C9AD02DE1B5ED5; JSESSIONID=D4A19F9E0C5A14738AA591F86121F3AF
+2016-03-12T19:17:52.963Z - info: [3/12/2016, 8:17:52 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:17:52.964Z - info: [3/12/2016, 8:17:52 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"87","date":"Sat, 12 Mar 2016 19:17:51 GMT","connection":"close"}
+2016-03-12T19:17:52.964Z - debug: ALIVE RESPONSE BODY {"success":true, 
+"keeper":{"ic_type":223, "ip_status":1}, 
+"hasLogin":false, 
+"ts":0}
+
+2016-03-12T19:17:52.965Z - info: [3/12/2016, 8:17:52 PM ALIVE] reconnect
+2016-03-12T19:17:52.965Z - info: [3/12/2016, 8:17:52 PM] ################## INIT ###################
+2016-03-12T19:17:52.965Z - info: [3/12/2016, 8:17:52 PM REQUEST PARAM] {"_dc":1457810272965}
+2016-03-12T19:17:57.117Z - info: [3/12/2016, 8:17:57 PM ENDPOINT] https://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh
+2016-03-12T19:17:57.117Z - info: [3/12/2016, 8:17:57 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=6C7228EEE1E6F8646EC8DDB2BC0D096A; Path=/connect; Secure"],"content-type":"text/html;charset=gbk","transfer-encoding":"chunked","date":"Sat, 12 Mar 2016 19:17:56 GMT","connection":"close"}
+2016-03-12T19:17:57.117Z - info: [3/12/2016, 8:17:57 PM NEW COOKIE] 0=JSESSIONID=6C7228EEE1E6F8646EC8DDB2BC0D096A; Path=/connect; Secure
+2016-03-12T19:17:57.118Z - info: [3/12/2016, 8:17:57 PM] ################## MSG ###################
+2016-03-12T19:17:57.118Z - info: [3/12/2016, 8:17:57 PM REQUEST PARAM] {"act":0,"_dc":1457810277118}
+2016-03-12T19:18:01.512Z - info: [3/12/2016, 8:18:01 PM ENDPOINT] https://account.cuc.edu.cn/notice/msg.jsp
+2016-03-12T19:18:01.512Z - info: [3/12/2016, 8:18:01 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=683116D7827234376E2269A4BE0FF057; Path=/; Secure"],"content-type":"text/html;charset=utf-8","content-length":"281","date":"Sat, 12 Mar 2016 19:17:59 GMT","connection":"close"}
+2016-03-12T19:18:01.512Z - info: [3/12/2016, 8:18:01 PM NEW COOKIE] 0=JSESSIONID=683116D7827234376E2269A4BE0FF057; Path=/; Secure
+2016-03-12T19:18:01.513Z - info: [3/12/2016, 8:18:01 PM] ################## LOGIN ###################
+2016-03-12T19:18:01.514Z - info: [3/12/2016, 8:18:01 PM REQUEST PARAM] {"act":2,"userid":"201010013082x","passwd":"PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==","_dc":1457810281514}
+2016-03-12T19:18:01.514Z - info: [3/12/2016, 8:18:01 PM COOKIE SENT] JSESSIONID=6C7228EEE1E6F8646EC8DDB2BC0D096A; JSESSIONID=683116D7827234376E2269A4BE0FF057
+2016-03-12T19:18:03.866Z - info: [3/12/2016, 8:18:03 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_login.jsp
+2016-03-12T19:18:03.866Z - info: [3/12/2016, 8:18:03 PM BODY] {"success":false, "errno": -101, "msg":"用户不存在"}
+
+2016-03-12T19:18:03.866Z - info: [3/12/2016, 8:18:03 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"53","date":"Sat, 12 Mar 2016 19:18:02 GMT","connection":"close"}
+2016-03-12T19:18:03.867Z - info: [3/12/2016, 8:18:03 PM] ################## CONNECT ###################
+2016-03-12T19:18:03.867Z - info: [3/12/2016, 8:18:03 PM REQUEST PARAM] {"act":4,"_dc":1457810283867}
+2016-03-12T19:18:03.867Z - info: [3/12/2016, 8:18:03 PM COOKIE SENT] JSESSIONID=6C7228EEE1E6F8646EC8DDB2BC0D096A; JSESSIONID=683116D7827234376E2269A4BE0FF057
+2016-03-12T19:18:05.913Z - info: [3/12/2016, 8:18:05 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:18:05.914Z - info: [3/12/2016, 8:18:05 PM BODY] {"success":false, "errno": -5, "msg":"登录超时", "ts":0}
+
+2016-03-12T19:18:05.914Z - info: [3/12/2016, 8:18:05 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"57","date":"Sat, 12 Mar 2016 19:18:04 GMT","connection":"close"}
+2016-03-12T19:18:05.914Z - info: [3/12/2016, 8:18:05 PM] ################## ALIVE ###################
+2016-03-12T19:18:05.915Z - info: [3/12/2016, 8:18:05 PM REQUEST PARAM] {"act":6,"_dc":1457810285915}
+2016-03-12T19:18:05.915Z - info: [3/12/2016, 8:18:05 PM COOKIE SENT] JSESSIONID=6C7228EEE1E6F8646EC8DDB2BC0D096A; JSESSIONID=683116D7827234376E2269A4BE0FF057
+2016-03-12T19:18:07.962Z - info: [3/12/2016, 8:18:07 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:18:07.962Z - info: [3/12/2016, 8:18:07 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"87","date":"Sat, 12 Mar 2016 19:18:06 GMT","connection":"close"}
+2016-03-12T19:18:07.963Z - debug: ALIVE RESPONSE BODY {"success":true, 
+"keeper":{"ic_type":223, "ip_status":1}, 
+"hasLogin":false, 
+"ts":0}
+
+2016-03-12T19:18:07.963Z - info: [3/12/2016, 8:18:07 PM ALIVE] reconnect
+2016-03-12T19:18:07.963Z - info: [3/12/2016, 8:18:07 PM] ################## INIT ###################
+2016-03-12T19:18:07.963Z - info: [3/12/2016, 8:18:07 PM REQUEST PARAM] {"_dc":1457810287963}
+2016-03-12T19:18:09.988Z - info: [3/12/2016, 8:18:09 PM ENDPOINT] https://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh
+2016-03-12T19:18:09.988Z - info: [3/12/2016, 8:18:09 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=E878AB5425B7C8E3E33EAC69BC817E1E; Path=/connect; Secure"],"content-type":"text/html;charset=gbk","transfer-encoding":"chunked","date":"Sat, 12 Mar 2016 19:18:09 GMT","connection":"close"}
+2016-03-12T19:18:09.989Z - info: [3/12/2016, 8:18:09 PM NEW COOKIE] 0=JSESSIONID=E878AB5425B7C8E3E33EAC69BC817E1E; Path=/connect; Secure
+2016-03-12T19:18:09.989Z - info: [3/12/2016, 8:18:09 PM] ################## MSG ###################
+2016-03-12T19:18:09.989Z - info: [3/12/2016, 8:18:09 PM REQUEST PARAM] {"act":0,"_dc":1457810289989}
+2016-03-12T19:18:12.057Z - info: [3/12/2016, 8:18:12 PM ENDPOINT] https://account.cuc.edu.cn/notice/msg.jsp
+2016-03-12T19:18:12.058Z - info: [3/12/2016, 8:18:12 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=41EFC13AF0C864778571BE0AAC00D1CD; Path=/; Secure"],"content-type":"text/html;charset=utf-8","content-length":"281","date":"Sat, 12 Mar 2016 19:18:11 GMT","connection":"close"}
+2016-03-12T19:18:12.058Z - info: [3/12/2016, 8:18:12 PM NEW COOKIE] 0=JSESSIONID=41EFC13AF0C864778571BE0AAC00D1CD; Path=/; Secure
+2016-03-12T19:18:12.059Z - info: [3/12/2016, 8:18:12 PM] ################## LOGIN ###################
+2016-03-12T19:18:12.059Z - info: [3/12/2016, 8:18:12 PM REQUEST PARAM] {"act":2,"userid":"201010013082x","passwd":"PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==","_dc":1457810292059}
+2016-03-12T19:18:12.060Z - info: [3/12/2016, 8:18:12 PM COOKIE SENT] JSESSIONID=E878AB5425B7C8E3E33EAC69BC817E1E; JSESSIONID=41EFC13AF0C864778571BE0AAC00D1CD
+2016-03-12T19:18:15.437Z - info: [3/12/2016, 8:18:15 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_login.jsp
+2016-03-12T19:18:15.438Z - info: [3/12/2016, 8:18:15 PM BODY] {"success":false, "errno": -101, "msg":"用户不存在"}
+
+2016-03-12T19:18:15.439Z - info: [3/12/2016, 8:18:15 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"53","date":"Sat, 12 Mar 2016 19:18:14 GMT","connection":"close"}
+2016-03-12T19:18:15.440Z - info: [3/12/2016, 8:18:15 PM] ################## CONNECT ###################
+2016-03-12T19:18:15.440Z - info: [3/12/2016, 8:18:15 PM REQUEST PARAM] {"act":4,"_dc":1457810295440}
+2016-03-12T19:18:15.441Z - info: [3/12/2016, 8:18:15 PM COOKIE SENT] JSESSIONID=E878AB5425B7C8E3E33EAC69BC817E1E; JSESSIONID=41EFC13AF0C864778571BE0AAC00D1CD
+2016-03-12T19:18:17.485Z - info: [3/12/2016, 8:18:17 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:18:17.486Z - info: [3/12/2016, 8:18:17 PM BODY] {"success":false, "errno": -5, "msg":"登录超时", "ts":0}
+
+2016-03-12T19:18:17.486Z - info: [3/12/2016, 8:18:17 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"57","date":"Sat, 12 Mar 2016 19:18:16 GMT","connection":"close"}
+2016-03-12T19:18:17.487Z - info: [3/12/2016, 8:18:17 PM] ################## ALIVE ###################
+2016-03-12T19:18:17.487Z - info: [3/12/2016, 8:18:17 PM REQUEST PARAM] {"act":6,"_dc":1457810297487}
+2016-03-12T19:18:17.487Z - info: [3/12/2016, 8:18:17 PM COOKIE SENT] JSESSIONID=E878AB5425B7C8E3E33EAC69BC817E1E; JSESSIONID=41EFC13AF0C864778571BE0AAC00D1CD
+2016-03-12T19:18:19.840Z - info: [3/12/2016, 8:18:19 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:18:19.841Z - info: [3/12/2016, 8:18:19 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"87","date":"Sat, 12 Mar 2016 19:18:19 GMT","connection":"close"}
+2016-03-12T19:18:19.842Z - debug: ALIVE RESPONSE BODY {"success":true, 
+"keeper":{"ic_type":223, "ip_status":1}, 
+"hasLogin":false, 
+"ts":0}
+
+2016-03-12T19:18:19.842Z - info: [3/12/2016, 8:18:19 PM ALIVE] reconnect
+2016-03-12T19:18:19.843Z - info: [3/12/2016, 8:18:19 PM] ################## INIT ###################
+2016-03-12T19:18:19.843Z - info: [3/12/2016, 8:18:19 PM REQUEST PARAM] {"_dc":1457810299843}
+2016-03-12T19:18:21.891Z - info: [3/12/2016, 8:18:21 PM ENDPOINT] https://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh
+2016-03-12T19:18:21.892Z - info: [3/12/2016, 8:18:21 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=9D0CFD9C26DFFF699F04ED0BA7D0DB77; Path=/connect; Secure"],"content-type":"text/html;charset=gbk","transfer-encoding":"chunked","date":"Sat, 12 Mar 2016 19:18:21 GMT","connection":"close"}
+2016-03-12T19:18:21.893Z - info: [3/12/2016, 8:18:21 PM NEW COOKIE] 0=JSESSIONID=9D0CFD9C26DFFF699F04ED0BA7D0DB77; Path=/connect; Secure
+2016-03-12T19:18:21.893Z - info: [3/12/2016, 8:18:21 PM] ################## MSG ###################
+2016-03-12T19:18:21.894Z - info: [3/12/2016, 8:18:21 PM REQUEST PARAM] {"act":0,"_dc":1457810301894}
+2016-03-12T19:18:23.936Z - info: [3/12/2016, 8:18:23 PM ENDPOINT] https://account.cuc.edu.cn/notice/msg.jsp
+2016-03-12T19:18:23.937Z - info: [3/12/2016, 8:18:23 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=95075B52B568F6FD90E22DFE60160D2C; Path=/; Secure"],"content-type":"text/html;charset=utf-8","content-length":"281","date":"Sat, 12 Mar 2016 19:18:23 GMT","connection":"close"}
+2016-03-12T19:18:23.937Z - info: [3/12/2016, 8:18:23 PM NEW COOKIE] 0=JSESSIONID=95075B52B568F6FD90E22DFE60160D2C; Path=/; Secure
+2016-03-12T19:18:23.938Z - info: [3/12/2016, 8:18:23 PM] ################## LOGIN ###################
+2016-03-12T19:18:23.938Z - info: [3/12/2016, 8:18:23 PM REQUEST PARAM] {"act":2,"userid":"201010013082x","passwd":"PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==","_dc":1457810303938}
+2016-03-12T19:18:23.939Z - info: [3/12/2016, 8:18:23 PM COOKIE SENT] JSESSIONID=9D0CFD9C26DFFF699F04ED0BA7D0DB77; JSESSIONID=95075B52B568F6FD90E22DFE60160D2C
+2016-03-12T19:18:26.598Z - info: [3/12/2016, 8:18:26 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_login.jsp
+2016-03-12T19:18:26.599Z - info: [3/12/2016, 8:18:26 PM BODY] {"success":false, "errno": -101, "msg":"用户不存在"}
+
+2016-03-12T19:18:26.600Z - info: [3/12/2016, 8:18:26 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"53","date":"Sat, 12 Mar 2016 19:18:25 GMT","connection":"close"}
+2016-03-12T19:18:26.600Z - info: [3/12/2016, 8:18:26 PM] ################## CONNECT ###################
+2016-03-12T19:18:26.601Z - info: [3/12/2016, 8:18:26 PM REQUEST PARAM] {"act":4,"_dc":1457810306600}
+2016-03-12T19:18:26.601Z - info: [3/12/2016, 8:18:26 PM COOKIE SENT] JSESSIONID=9D0CFD9C26DFFF699F04ED0BA7D0DB77; JSESSIONID=95075B52B568F6FD90E22DFE60160D2C
+2016-03-12T19:18:28.748Z - info: [3/12/2016, 8:18:28 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:18:28.749Z - info: [3/12/2016, 8:18:28 PM BODY] {"success":false, "errno": -5, "msg":"登录超时", "ts":0}
+
+2016-03-12T19:18:28.749Z - info: [3/12/2016, 8:18:28 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"57","date":"Sat, 12 Mar 2016 19:18:27 GMT","connection":"close"}
+2016-03-12T19:18:28.751Z - info: [3/12/2016, 8:18:28 PM] ################## ALIVE ###################
+2016-03-12T19:18:28.751Z - info: [3/12/2016, 8:18:28 PM REQUEST PARAM] {"act":6,"_dc":1457810308751}
+2016-03-12T19:18:28.751Z - info: [3/12/2016, 8:18:28 PM COOKIE SENT] JSESSIONID=9D0CFD9C26DFFF699F04ED0BA7D0DB77; JSESSIONID=95075B52B568F6FD90E22DFE60160D2C
+2016-03-12T19:18:30.796Z - info: [3/12/2016, 8:18:30 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:23:50.081Z - info: [3/12/2016, 8:23:50 PM] ################## INIT ###################
+2016-03-12T19:23:50.087Z - info: [3/12/2016, 8:23:50 PM REQUEST PARAM] {"_dc":1457810630086}
+2016-03-12T19:23:53.787Z - info: [3/12/2016, 8:23:53 PM ENDPOINT] https://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh
+2016-03-12T19:23:53.788Z - info: [3/12/2016, 8:23:53 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=01E7F2B6C06ED79C1235E6CFCDEA2572; Path=/connect; Secure"],"content-type":"text/html;charset=gbk","transfer-encoding":"chunked","date":"Sat, 12 Mar 2016 19:23:53 GMT","connection":"close"}
+2016-03-12T19:23:53.788Z - info: [3/12/2016, 8:23:53 PM NEW COOKIE FROM SEVER] 0=JSESSIONID=01E7F2B6C06ED79C1235E6CFCDEA2572; Path=/connect; Secure
+2016-03-12T19:23:53.790Z - info: [3/12/2016, 8:23:53 PM] ################## MSG ###################
+2016-03-12T19:23:53.791Z - info: [3/12/2016, 8:23:53 PM REQUEST PARAM] {"act":0,"_dc":1457810633791}
+2016-03-12T19:23:55.826Z - info: [3/12/2016, 8:23:55 PM ENDPOINT] https://account.cuc.edu.cn/notice/msg.jsp
+2016-03-12T19:23:55.827Z - info: [3/12/2016, 8:23:55 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=46E4216F4528D288483D8C8535A87BF7; Path=/; Secure"],"content-type":"text/html;charset=utf-8","content-length":"281","date":"Sat, 12 Mar 2016 19:23:55 GMT","connection":"close"}
+2016-03-12T19:23:55.827Z - info: [3/12/2016, 8:23:55 PM NEW COOKIE FROM SEVER] 0=JSESSIONID=46E4216F4528D288483D8C8535A87BF7; Path=/; Secure
+2016-03-12T19:23:55.828Z - info: [3/12/2016, 8:23:55 PM] ################## LOGIN ###################
+2016-03-12T19:23:55.829Z - info: [3/12/2016, 8:23:55 PM REQUEST PARAM] {"act":2,"userid":"201010013082x","passwd":"PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==","_dc":1457810635828}
+2016-03-12T19:23:55.829Z - info: [3/12/2016, 8:23:55 PM COOKIE SENT] JSESSIONID=01E7F2B6C06ED79C1235E6CFCDEA2572; JSESSIONID=46E4216F4528D288483D8C8535A87BF7
+2016-03-12T19:23:57.869Z - info: [3/12/2016, 8:23:57 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_login.jsp
+2016-03-12T19:23:57.874Z - info: [3/12/2016, 8:23:57 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"53","date":"Sat, 12 Mar 2016 19:23:57 GMT","connection":"close"}
+2016-03-12T19:23:57.875Z - info: [3/12/2016, 8:23:57 PM BODY] {"success":false, "errno": -101, "msg":"用户不存在"}
+
+2016-03-12T19:23:57.875Z - info: [3/12/2016, 8:23:57 PM] ################## CONNECT ###################
+2016-03-12T19:23:57.876Z - info: [3/12/2016, 8:23:57 PM REQUEST PARAM] {"act":4,"_dc":1457810637876}
+2016-03-12T19:23:57.877Z - info: [3/12/2016, 8:23:57 PM COOKIE SENT] JSESSIONID=01E7F2B6C06ED79C1235E6CFCDEA2572; JSESSIONID=46E4216F4528D288483D8C8535A87BF7
+2016-03-12T19:23:59.916Z - info: [3/12/2016, 8:23:59 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:23:59.917Z - info: [3/12/2016, 8:23:59 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"57","date":"Sat, 12 Mar 2016 19:23:59 GMT","connection":"close"}
+2016-03-12T19:23:59.917Z - info: [3/12/2016, 8:23:59 PM BODY] {"success":false, "errno": -5, "msg":"登录超时", "ts":0}
+
+2016-03-12T19:23:59.918Z - info: [3/12/2016, 8:23:59 PM] ################## ALIVE ###################
+2016-03-12T19:23:59.918Z - info: [3/12/2016, 8:23:59 PM REQUEST PARAM] {"act":6,"_dc":1457810639918}
+2016-03-12T19:23:59.919Z - info: [3/12/2016, 8:23:59 PM COOKIE SENT] JSESSIONID=01E7F2B6C06ED79C1235E6CFCDEA2572; JSESSIONID=46E4216F4528D288483D8C8535A87BF7
+2016-03-12T19:24:08.102Z - info: [3/12/2016, 8:24:08 PM] ################## INIT ###################
+2016-03-12T19:24:08.110Z - info: [3/12/2016, 8:24:08 PM REQUEST PARAM] {"_dc":1457810648109}
+2016-03-12T19:24:10.271Z - info: [3/12/2016, 8:24:10 PM ENDPOINT] https://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh
+2016-03-12T19:24:10.272Z - info: [3/12/2016, 8:24:10 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=0A6BBDABC5E0BC068C05A1368857DA7E; Path=/connect; Secure"],"content-type":"text/html;charset=gbk","transfer-encoding":"chunked","date":"Sat, 12 Mar 2016 19:24:09 GMT","connection":"close"}
+2016-03-12T19:24:10.272Z - info: [3/12/2016, 8:24:10 PM NEW COOKIE FROM SEVER] 0=JSESSIONID=0A6BBDABC5E0BC068C05A1368857DA7E; Path=/connect; Secure
+2016-03-12T19:24:10.274Z - info: [3/12/2016, 8:24:10 PM] ################## MSG ###################
+2016-03-12T19:24:10.274Z - info: [3/12/2016, 8:24:10 PM REQUEST PARAM] {"act":0,"_dc":1457810650274}
+2016-03-12T19:24:12.311Z - info: [3/12/2016, 8:24:12 PM ENDPOINT] https://account.cuc.edu.cn/notice/msg.jsp
+2016-03-12T19:24:12.312Z - info: [3/12/2016, 8:24:12 PM HEADER] {"server":"Apache-Coyote/1.1","set-cookie":["JSESSIONID=6F332DE688465DB7F419648753812168; Path=/; Secure"],"content-type":"text/html;charset=utf-8","content-length":"281","date":"Sat, 12 Mar 2016 19:24:11 GMT","connection":"close"}
+2016-03-12T19:24:12.312Z - info: [3/12/2016, 8:24:12 PM NEW COOKIE FROM SEVER] 0=JSESSIONID=6F332DE688465DB7F419648753812168; Path=/; Secure
+2016-03-12T19:24:12.313Z - info: [3/12/2016, 8:24:12 PM] ################## LOGIN ###################
+2016-03-12T19:24:12.313Z - info: [3/12/2016, 8:24:12 PM REQUEST PARAM] {"act":2,"userid":"201010013082","passwd":"PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==","_dc":1457810652313}
+2016-03-12T19:24:12.314Z - info: [3/12/2016, 8:24:12 PM COOKIE SENT] JSESSIONID=0A6BBDABC5E0BC068C05A1368857DA7E; JSESSIONID=6F332DE688465DB7F419648753812168
+2016-03-12T19:24:14.461Z - info: [3/12/2016, 8:24:14 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_login.jsp
+2016-03-12T19:24:14.462Z - info: [3/12/2016, 8:24:14 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"63","date":"Sat, 12 Mar 2016 19:24:13 GMT","connection":"close"}
+2016-03-12T19:24:14.463Z - info: [3/12/2016, 8:24:14 PM BODY] {"success":true, "startTime": 1457810654171, "msg":"登录成功"}
+
+2016-03-12T19:24:14.464Z - info: [3/12/2016, 8:24:14 PM] ################## CONNECT ###################
+2016-03-12T19:24:14.464Z - info: [3/12/2016, 8:24:14 PM REQUEST PARAM] {"act":4,"_dc":1457810654464}
+2016-03-12T19:24:14.465Z - info: [3/12/2016, 8:24:14 PM COOKIE SENT] JSESSIONID=0A6BBDABC5E0BC068C05A1368857DA7E; JSESSIONID=6F332DE688465DB7F419648753812168
+2016-03-12T19:24:16.474Z - info: [3/12/2016, 8:24:16 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:24:16.475Z - info: [3/12/2016, 8:24:16 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"78","date":"Sat, 12 Mar 2016 19:24:15 GMT","connection":"close"}
+2016-03-12T19:24:16.476Z - info: [3/12/2016, 8:24:16 PM BODY] {"success":false, "errno": -43, "msg":"互联网连接失败", "ic_type":95, "ts":0}
+
+2016-03-12T19:24:16.477Z - info: [3/12/2016, 8:24:16 PM] ################## ALIVE ###################
+2016-03-12T19:24:16.477Z - info: [3/12/2016, 8:24:16 PM REQUEST PARAM] {"act":6,"_dc":1457810656477}
+2016-03-12T19:24:16.477Z - info: [3/12/2016, 8:24:16 PM COOKIE SENT] JSESSIONID=0A6BBDABC5E0BC068C05A1368857DA7E; JSESSIONID=6F332DE688465DB7F419648753812168
+2016-03-12T19:24:19.885Z - info: [3/12/2016, 8:24:19 PM ENDPOINT] https://account.cuc.edu.cn/connect/ws/ws_action.jsp
+2016-03-12T19:24:19.885Z - info: [3/12/2016, 8:24:19 PM HEADER] {"server":"Apache-Coyote/1.1","content-type":"text/html;charset=gbk","content-length":"86","date":"Sat, 12 Mar 2016 19:24:18 GMT","connection":"close"}
+2016-03-12T19:24:19.886Z - debug: ALIVE RESPONSE BODY {"success":true, 
+"keeper":{"ic_type":223, "ip_status":1}, 
+"hasLogin":true, 
+"ts":0}
+
+2016-03-12T19:24:19.886Z - info: [3/12/2016, 8:24:19 PM ALIVE] keep

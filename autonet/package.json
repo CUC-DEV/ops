@@ -1,0 +1,25 @@
+{
+  "name": "autonet",
+  "version": "1.0.0",
+  "description": "js client to connect cuc network",
+  "main": "autonet.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "dependencies": {
+    "promise": "^7.1.1",
+    "superagent": "^1.8.0",
+    "superagent-charset": "^1.0.0",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Mengyu LIU",
+  "license": "ISC"
+}

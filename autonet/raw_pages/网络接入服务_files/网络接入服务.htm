@@ -1,0 +1,271 @@
+������
+<!DOCTYPE HTML>
+<!-- saved from url=(0041)http://account.cuc.edu.cn/connect/201303/ -->
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+ 
+<META http-equiv="Content-Type" content="text/html; charset=gbk"> 
+<META name="viewport" content="width=device-width, height=device-height, initial-scale=1"> 
+<TITLE>������������</TITLE> <LINK href="������������_files/jquery.mobile-1.3.0.min.css" rel="Stylesheet" 
+type="text/css"> <LINK href="������������_files/global.css" rel="Stylesheet" type="text/css"> 
+<LINK href="������������_files/user.css" rel="Stylesheet" type="text/css"> 
+<SCRIPT src="������������_files/jsbn.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="������������_files/prng4.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="������������_files/rng.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="������������_files/rsa.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="������������_files/base64.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="������������_files/jquery-1.7.2.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="������������_files/jquery.cookie.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="������������_files/main.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="������������_files/jquery.mobile-1.3.0.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="������������_files/locale_en.js" type="text/javascript"></SCRIPT>
+ 
+<STYLE type="text/css"></STYLE>
+ ������
+<SCRIPT language="javascript">
+var MYIP = "222.31.64.134";
+var IsWlan = false;
+var IsMobile = false;
+var HasLogin = false;
+var MODULE = "8099df2c3f092c05cccb6f24d5173860bf1772d7f7b8b60f5079a1b80700045d6f1b1c06d8b664515a4add8f3925e4fb053da7cd567b6be7c0d9f11218cf4e91";
+var EMPOENT = "10001";
+var KEY;
+var TIMER_GETINFO = 0;
+var TIMER_ONLINETIME = 0;
+var TIMER_NOTICE = 0;
+var CONNECT_TIME = (new Date()).getTime();
+var SetSession = 0;
+
+$(document).ready(function() {
+	$.ajaxSetup({
+ 	 	contentType: "application/x-www-form-urlencoded; charset=utf-8"
+	});
+	if (($.browser.msie) && ($.browser.version == "6.0")) {
+		alert("������������֧�ֱ�ҳ�棬��ͨ������ҳ�����е�¼");
+		window.location.href = "/connect/simple/";
+	}
+
+	$("#ar_connect").click(
+		function() {
+			login();
+		}
+	);
+	$("#ar_disconnect").click(
+		function() {
+			disconnect();
+		}
+	).parent().hide();
+	$("#ar_reconnect").click(
+		function() {
+			window.location.href="./index.jsp";
+		}
+	).parent().hide();
+	$("#ar_help").click(
+		function() {
+			$("#div_help").show();
+		}
+	);
+	$("#ar_clear").click(
+		function() {
+			clearCookie();
+		}
+	);
+	$("#btn_closehelp").click(
+		function() {
+			$("#div_help").hide();
+		}
+	);
+
+	$("#ar_mobileok").click(
+		function() {
+			$("#div_mobileinfo").popup("close");
+			$("#alivetime").val($("#sel_time").val());
+			if (SetSession == 1) {
+				keepAlive();
+				SetSession = 0;
+			}
+		}
+	);
+
+	$("#ar_mobilecancel").click(
+		function() {
+			$("#div_mobileinfo").popup("close");
+		}
+	);
+
+	$("#ar_noticeok").click(
+		function() {
+			$.cookie('INFO_TIMESTAMP', $("#notice_timestamp").val(), {expires: 7});
+			$("#div_notice").popup("close");
+		}
+	);
+
+	$("#myseltime").change(function(){
+		$("#alivetime").val($("#myseltime").val());
+	});
+
+	$("#div_online").hide();
+
+	$("#passwd").bind('keyup', function(event) {
+		if (event.keyCode == '13') {
+			login();
+		}
+	})
+	$("#alivetime").val(0);
+
+	
+	getNotice();
+});
+</SCRIPT>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.9600.18231"></HEAD> 
+<BODY>
+<DIV class="mypage" id="mypage" data-role="page" data-theme="d">
+<CENTER><INPUT name="alivetime" id="alivetime" type="hidden" value="0">			 
+<DIV class="myheader" data-role="header" data-theme="c"><A class="ui-btn-left" 
+href="javascript:window.location.reload();">����</A>				 
+<H1>�й���ý��ѧ ������������</H1><A class="ui-btn-right" href="http://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh">����</A>
+							 </DIV><!-- /header -->			 
+<DIV class="mycontent" data-role="content" data-theme="d">
+<DIV class="ui-dialog-contain ui-overlay-shadow ui-corner-all" role="dialog" 
+style="margin-top: 10px;">
+<DIV class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="b">
+<H2>State</H2></DIV>
+<DIV class="ui-content ui-body-d" role="main" data-theme="d">
+<DIV>
+<DIV>
+<DIV class="left divtitle">IP: </DIV>
+<DIV class="left divcontent">222.31.64.134</DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV>
+<DIV class="left divtitle">State: </DIV>
+<DIV class="left divcontent"><SPAN id="sp_campus">									Campus connected
+									 </SPAN><BR><SPAN id="sp_internet">									Internet disconnected
+									 </SPAN>			  				 </DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV>
+<DIV class="left pt15 divtitle">Account: </DIV>
+<DIV 
+class="left divcontent"><INPUT name="userid" id="userid" type="text" data-mini="true">
+			  				 </DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV id="tr_passwd">
+<DIV class="left pt15 divtitle">Password: </DIV>
+<DIV 
+class="left divcontent"><INPUT name="passwd" id="passwd" type="password" data-mini="true"></DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV id="tr_cookie">
+<DIV class="left divcontent" style="width: 100%; text-align: center;">
+<FIELDSET data-role="controlgroup" data-mini="true" 
+data-type="horizontal"><INPUT name="saveuid" id="saveuid" style="border: 0px currentColor; border-image: none;" 
+type="checkbox" value="1">			  						 <LABEL for="saveuid">save uid</LABEL>			  
+						 <INPUT name="savepsw" id="savepsw" style="border: 0px currentColor; border-image: none;" 
+type="checkbox" value="1">			  						 <LABEL for="savepsw">save psw</LABEL>			  
+						 <A id="ar_clear" data-role="button" data-theme="c">clear</A>			  
+					 </FIELDSET></DIV></DIV>
+<DIV class="invisible" id="tr_onlinetime">
+<DIV class="left divtitle">Online: </DIV>
+<DIV class="left divcontent" id="td_onlinetime">00:00:00</DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV class="invisible" id="tr_charge">
+<DIV class="left divtitle">									Charging: 								 </DIV>
+<DIV class="left divcontent" id="td_charge"></DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV class="invisible" id="tr_flux">
+<DIV class="left divtitle">									Internet: 								 </DIV>
+<DIV class="left divcontent" id="td_flux"></DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV class="invisible" id="tr_allowflux">
+<DIV class="left divtitle">									Available: 								 </DIV>
+<DIV class="left divcontent" id="td_allowflux"></DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV><INPUT id="ar_connect" type="button" value="Connect" data-role="button" data-theme="b" data-mini="true" data-inline="true">
+								 <INPUT id="ar_disconnect" type="button" value="Disconnect" data-role="button" data-theme="b" data-mini="true" data-inline="true">
+								 <INPUT id="ar_reconnect" type="button" value="reLogin" data-role="button" data-theme="b" data-mini="true" data-inline="true">
+								 <INPUT id="ar_help" type="button" value="HELP" data-role="button" data-theme="b" data-mini="true" data-inline="true">
+								 <A href="http://account.cuc.edu.cn/connect/simple/">����</A>								 <A 
+href="http://account.cuc.edu.cn/user/" target="_blank">�û�����ϵͳ</A>
+							 </DIV></DIV></DIV></DIV><!--div id="div_notice" style="max-width:500px; text-align:left;">
+					<a href="http://nic.cuc.edu.cn/article/261/" target="_blank">���������ڹ���ѧ��λ��Ƹ(2014�괺��ѧ��)</a>
+				</div-->
+				 
+<DIV id="div_online" style="max-width: 500px;">
+<UL id="ul_online" data-role="listview" data-split-icon="delete" data-inset="true"></UL></DIV>
+<DIV id="div_help">
+<DIV class="ui-dialog-contain ui-overlay-shadow ui-corner-all" role="dialog" 
+style="margin-top: 50px;">
+<DIV class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="b">
+<H2>HELP</H2><A class="ui-btn-right" id="btn_closehelp" href="javascript:void(0);" 
+data-icon="delete">�ر�</A>						 </DIV>
+<DIV class="ui-content ui-body-d" role="main" data-theme="d">
+<TABLE style="width: 99%; text-align: left; line-height: 1.5em;" cellspacing="0" 
+cellpadding="0">
+  <TBODY>
+  <TR>
+    <TD>1����������¼����ҳ�����⣬���������Է���<A href="http://account.cuc.edu.cn/connect/simple/index.jsp">������¼ҳ��</A>��
+      									�������Ĳ���ϵͳ�ǵ�����ϵͳ��������<A onclick="javascript:setSessionTime();" href="javascript:void(0);">����</A>�趨����ʱ����
+      								 </TD></TR>
+  <TR>
+    <TD>2�������������벻��ȷ��������<A href="https://account.cuc.edu.cn/pswrecover/" 
+      target="_blank">�һ�����</A>�����һء�								 </TD></TR>
+  <TR>
+    <TD>3��ÿ�ζ�Ҫ��¼�����ܹر�ҳ��̫�鷳��<BR>
+      									������ʹ�á������������ͻ��ˡ����������Զ���¼��������С�����������½ǣ��򵥷��㡣<BR>
+      									���ص�ַ:<BR>����<A href="http://account.cuc.edu.cn/download/iConnector.zip" 
+      target="_blank">���İ�</A>									���Զ����¹��ܣ�֧��Windows XP/Vista/7���Ƽ�ʹ�á�<BR>
+      									����<A href="http://account.cuc.edu.cn/download/iConnector_sp.exe" 
+      target="_blank">English Version</A>
+      									 û���Զ����¹��ܣ�����Ҫ��װ�����ڸ���Windowsƽ̨��ʹ�á�<BR>									����<A href="http://account.cuc.edu.cn/download/Connector.apk" 
+      target="_blank">Android</A>									 ������Androidƽ̨��								 </TD></TR>
+  <TR>
+    <TD>4��Ϊȷ���˻���ȫ���벻Ҫʹ�ù��ڼ򵥵����롣�޸����롢�ʼ����롢������������¼<A href="http://account.cuc.edu.cn/user/" 
+      target="_blank">�û�����ϵͳ</A><BR><A href="https://account.cuc.edu.cn/user/" 
+      target="_blank">https://account.cuc.edu.cn/user/</A>								 </TD></TR>
+  <TR>
+    <TD>
+      									5���뱣�ܺø����ʺţ���Ҫ���ʺ���Ϣ������������ʹ�á����˺Ų�����������¼������¼�����棬�Ҳ��ų�ŵ����͸¶����������˽�������������⣺<BR>
+      									������1���û���Ȩ�Ҳ���͸¶��Щ��Ϣ��<BR>									������2����Ӧ�ķ��ɼ�����Ҫ���Ҳ����ṩ�û����й����ϡ�
+      								 </TD></TR>
+  <TR>
+    <TD>6��֧��ƽ̨��iOS 3.2-6.1, Android 2.1-4.1, Windows Phone 7.5-7.8, Blackberry 
+      6-10, FireFox 10-18, IE 8-10, Chrome 16-24, UC Browser
+  								 </TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV><!-- /content -->			 
+<DIV class="footer-docs myfooter" data-role="footer" data-theme="d" 
+data-position="fixed" data-id="myfooter">&copy; �й���ý��ѧ ����������������			 </DIV><!-- /footer -->
+		 </CENTER>
+<DIV id="div_mobileinfo" data-role="popup">
+<DIV data-role="header" data-theme="b">
+<H2>INFO</H2></DIV>
+<DIV data-role="content">
+<DIV>
+<DIV class="left pt15" style="width: 180px;">Choose online time:</DIV>
+<DIV class="left"><SELECT id="sel_time" data-theme="b" data-mini="true" 
+data-inline="true" data-native-menu="false" data-overlay-theme="b"><OPTION 
+  value="1800">Half an hour</OPTION>							 <OPTION value="3600" selected="">1 
+  hour</OPTION>							 <OPTION value="7200">2 hour</OPTION>							 <OPTION 
+  value="10800">3 hour</OPTION>							 <OPTION value="14400">4 hour</OPTION>
+  						 </SELECT>					 </DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV>Disconnected when you log out</DIV>
+<DIV style="text-align: center;"><A id="ar_mobileok" data-role="button" 
+data-theme="b" data-mini="true" data-inline="true">OK</A>					 <A id="ar_mobilecancel" 
+data-role="button" data-theme="b" data-mini="true" data-inline="true">Cancel</A>
+				 </DIV></DIV></DIV>
+<DIV id="div_notice" data-role="popup">
+<DIV data-role="header" data-theme="b">
+<H2>֪ͨ</H2></DIV>
+<DIV data-role="content">
+<DIV id="div_notice_content"></DIV>
+<DIV style="text-align: center;"><A id="ar_noticeok" data-role="button" 
+data-theme="b" data-mini="true" data-inline="true">֪����</A>
+				 </DIV><INPUT name="notice_timestamp" id="notice_timestamp" type="hidden" value="0">
+			 </DIV></DIV></DIV><!-- /page --> </BODY></HTML>

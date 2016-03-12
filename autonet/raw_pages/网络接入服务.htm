@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<!-- saved from url=(0041)http://account.cuc.edu.cn/connect/201303/ -->
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+ 
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<META name="viewport" content="width=device-width, height=device-height, initial-scale=1"> 
+<TITLE>网络接入服务</TITLE><LINK href="网络接入服务_files/global.css" rel="Stylesheet" type="text/css"> 
+<LINK href="网络接入服务_files/user.css" rel="Stylesheet" type="text/css"> 
+<SCRIPT src="网络接入服务_files/jsbn.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="网络接入服务_files/prng4.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="网络接入服务_files/rng.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="网络接入服务_files/rsa.js" type="text/javascript">   </SCRIPT>
+ 
+<SCRIPT src="网络接入服务_files/base64.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="网络接入服务_files/jquery-1.7.2.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="网络接入服务_files/jquery.cookie.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="网络接入服务_files/main.js" type="text/javascript"></SCRIPT>
+ 
+ <script>
+    $(document).bind('mobileinit',function(){
+        $.mobile.pushStateEnabled = false;
+    });
+</script>
+ 
+<SCRIPT src="网络接入服务_files/jquery.mobile-1.3.0.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="网络接入服务_files/locale_en.js" type="text/javascript"></SCRIPT>
+ 
+<STYLE type="text/css"></STYLE>
+ 
+<SCRIPT language="javascript">
+var MYIP = "222.31.64.134";
+var IsWlan = false;
+var IsMobile = false;
+var HasLogin = false;
+var MODULE = "8099df2c3f092c05cccb6f24d5173860bf1772d7f7b8b60f5079a1b80700045d6f1b1c06d8b664515a4add8f3925e4fb053da7cd567b6be7c0d9f11218cf4e91";
+var EMPOENT = "10001";
+var KEY;
+var TIMER_GETINFO = 0;
+var TIMER_ONLINETIME = 0;
+var TIMER_NOTICE = 0;
+var CONNECT_TIME = (new Date()).getTime();
+var SetSession = 0;
+
+$(document).ready(function() {
+
+	$("#ar_connect").click(
+		function() {
+			login();
+		}
+	);
+	$("#ar_disconnect").click(
+		function() {
+			disconnect();
+		}
+	).parent().hide();
+	$("#ar_reconnect").click(
+		function() {
+			window.location.href="./index.jsp";
+		}
+	).parent().hide();
+	$("#ar_help").click(
+		function() {
+			$("#div_help").show();
+		}
+	);
+	$("#ar_clear").click(
+		function() {
+			clearCookie();
+		}
+	);
+	$("#btn_closehelp").click(
+		function() {
+			$("#div_help").hide();
+		}
+	);
+
+	$("#ar_mobileok").click(
+		function() {
+			$("#div_mobileinfo").popup("close");
+			$("#alivetime").val($("#sel_time").val());
+			if (SetSession == 1) {
+				keepAlive();
+				SetSession = 0;
+			}
+		}
+	);
+
+	$("#ar_mobilecancel").click(
+		function() {
+			$("#div_mobileinfo").popup("close");
+		}
+	);
+
+	$("#ar_noticeok").click(
+		function() {
+			$.cookie('INFO_TIMESTAMP', $("#notice_timestamp").val(), {expires: 7});
+			$("#div_notice").popup("close");
+		}
+	);
+
+	$("#myseltime").change(function(){
+		$("#alivetime").val($("#myseltime").val());
+	});
+
+	$("#div_online").hide();
+
+	$("#passwd").bind('keyup', function(event) {
+		if (event.keyCode == '13') {
+			login();
+		}
+	})
+	$("#alivetime").val(0);
+
+	
+	getNotice();
+});
+</SCRIPT>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.9600.18231"></HEAD> 
+<BODY>
+<DIV class="mypage" id="mypage" data-role="page" data-theme="d">
+<CENTER><INPUT name="alivetime" id="alivetime" type="hidden" value="0">			 
+<DIV class="myheader" data-role="header" data-theme="c"><A class="ui-btn-left" 
+href="javascript:window.location.reload();">重载</A>				 
+<H1>中国传媒大学 网络接入服务</H1><A class="ui-btn-right" href="http://account.cuc.edu.cn/connect/201303/index.jsp?locale=zh">中文</A>
+							 </DIV><!-- /header -->			 
+<DIV class="mycontent" data-role="content" data-theme="d">
+<DIV class="ui-dialog-contain ui-overlay-shadow ui-corner-all" role="dialog" 
+style="margin-top: 10px;">
+<DIV class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="b">
+<H2>State</H2></DIV>
+<DIV class="ui-content ui-body-d" role="main" data-theme="d">
+<DIV>
+<DIV>
+<DIV class="left divtitle">IP: </DIV>
+<DIV class="left divcontent">222.31.64.134</DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV>
+<DIV class="left divtitle">State: </DIV>
+<DIV class="left divcontent"><SPAN id="sp_campus">									Campus connected
+									 </SPAN><BR><SPAN id="sp_internet">									Internet disconnected
+									 </SPAN>			  				 </DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV>
+<DIV class="left pt15 divtitle">Account: </DIV>
+<DIV 
+class="left divcontent"><INPUT name="userid" id="userid" type="text" data-mini="true">
+			  				 </DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV id="tr_passwd">
+<DIV class="left pt15 divtitle">Password: </DIV>
+<DIV 
+class="left divcontent"><INPUT name="passwd" id="passwd" type="password" data-mini="true"></DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV id="tr_cookie">
+<DIV class="left divcontent" style="width: 100%; text-align: center;">
+<FIELDSET data-role="controlgroup" data-mini="true" 
+data-type="horizontal"><INPUT name="saveuid" id="saveuid" style="border: 0px currentColor; border-image: none;" 
+type="checkbox" value="1">			  						 <LABEL for="saveuid">save uid</LABEL>			  
+						 <INPUT name="savepsw" id="savepsw" style="border: 0px currentColor; border-image: none;" 
+type="checkbox" value="1">			  						 <LABEL for="savepsw">save psw</LABEL>			  
+						 <A id="ar_clear" data-role="button" data-theme="c">clear</A>			  
+					 </FIELDSET></DIV></DIV>
+<DIV class="invisible" id="tr_onlinetime">
+<DIV class="left divtitle">Online: </DIV>
+<DIV class="left divcontent" id="td_onlinetime">00:00:00</DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV class="invisible" id="tr_charge">
+<DIV class="left divtitle">									Charging: 								 </DIV>
+<DIV class="left divcontent" id="td_charge"></DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV class="invisible" id="tr_flux">
+<DIV class="left divtitle">									Internet: 								 </DIV>
+<DIV class="left divcontent" id="td_flux"></DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV class="invisible" id="tr_allowflux">
+<DIV class="left divtitle">									Available: 								 </DIV>
+<DIV class="left divcontent" id="td_allowflux"></DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV><INPUT id="ar_connect" type="button" value="Connect" data-role="button" data-theme="b" data-mini="true" data-inline="true">
+								 <INPUT id="ar_disconnect" type="button" value="Disconnect" data-role="button" data-theme="b" data-mini="true" data-inline="true">
+								 <INPUT id="ar_reconnect" type="button" value="reLogin" data-role="button" data-theme="b" data-mini="true" data-inline="true">
+								 <INPUT id="ar_help" type="button" value="HELP" data-role="button" data-theme="b" data-mini="true" data-inline="true">
+								 <A href="http://account.cuc.edu.cn/connect/simple/">简版</A>								 <A 
+href="http://account.cuc.edu.cn/user/" target="_blank">用户自助系统</A>
+							 </DIV></DIV></DIV></DIV><!--div id="div_notice" style="max-width:500px; text-align:left;">
+					<a href="http://nic.cuc.edu.cn/article/261/" target="_blank">网络中心勤工俭学岗位招聘(2014年春季学期)</a>
+				</div-->
+				 
+<DIV id="div_online" style="max-width: 500px;">
+<UL id="ul_online" data-role="listview" data-split-icon="delete" data-inset="true"></UL></DIV>
+<DIV id="div_help">
+<DIV class="ui-dialog-contain ui-overlay-shadow ui-corner-all" role="dialog" 
+style="margin-top: 50px;">
+<DIV class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="b">
+<H2>HELP</H2><A class="ui-btn-right" id="btn_closehelp" href="javascript:void(0);" 
+data-icon="delete">关闭</A>						 </DIV>
+<DIV class="ui-content ui-body-d" role="main" data-theme="d">
+<TABLE style="width: 99%; text-align: left; line-height: 1.5em;" cellspacing="0" 
+cellpadding="0">
+  <TBODY>
+  <TR>
+    <TD>1、如果您登录本网页有问题，您可以试试访问<A href="http://account.cuc.edu.cn/connect/simple/index.jsp">简版登录页面</A>。
+      									如果您的操作系统是单任务系统，请点击<A onclick="javascript:setSessionTime();" href="javascript:void(0);">这里</A>设定上网时长。
+      								 </TD></TR>
+  <TR>
+    <TD>2、如果您的密码不正确，请点击<A href="https://account.cuc.edu.cn/pswrecover/" 
+      target="_blank">找回密码</A>进行找回。								 </TD></TR>
+  <TR>
+    <TD>3、每次都要登录还不能关闭页面太麻烦？<BR>
+      									您可以使用“互联网接入客户端”，开机后自动登录，可以最小化到电脑右下角，简单方便。<BR>
+      									下载地址:<BR>　　<A href="http://account.cuc.edu.cn/download/iConnector.zip" 
+      target="_blank">中文版</A>									有自动更新功能，支持Windows XP/Vista/7。推荐使用。<BR>
+      									　　<A href="http://account.cuc.edu.cn/download/iConnector_sp.exe" 
+      target="_blank">English Version</A>
+      									 没有自动更新功能，不需要安装，能在各种Windows平台中使用。<BR>									　　<A href="http://account.cuc.edu.cn/download/Connector.apk" 
+      target="_blank">Android</A>									 适用于Android平台。								 </TD></TR>
+  <TR>
+    <TD>4、为确保账户安全，请不要使用过于简单的密码。修改密码、邮件申请、包月上网请登录<A href="http://account.cuc.edu.cn/user/" 
+      target="_blank">用户自助系统</A><BR><A href="https://account.cuc.edu.cn/user/" 
+      target="_blank">https://account.cuc.edu.cn/user/</A>								 </TD></TR>
+  <TR>
+    <TD>
+      									5、请保管好个人帐号，不要将帐号信息随意借给他人使用。您账号产生的上网记录将被记录并留存，我部门承诺不会透露关于您的隐私，以下情况除外：<BR>
+      									　　（1）用户授权我部门透露这些信息；<BR>									　　（2）相应的法律及程序要求我部门提供用户的有关资料。
+      								 </TD></TR>
+  <TR>
+    <TD>6、支持平台：iOS 3.2-6.1, Android 2.1-4.1, Windows Phone 7.5-7.8, Blackberry 
+      6-10, FireFox 10-18, IE 8-10, Chrome 16-24, UC Browser
+  								 </TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV><!-- /content -->			 
+<DIV class="footer-docs myfooter" data-role="footer" data-theme="d" 
+data-position="fixed" data-id="myfooter">&copy; 中国传媒大学 计算机与网络中心			 </DIV><!-- /footer -->
+		 </CENTER>
+<DIV id="div_mobileinfo" data-role="popup">
+<DIV data-role="header" data-theme="b">
+<H2>INFO</H2></DIV>
+<DIV data-role="content">
+<DIV>
+<DIV class="left pt15" style="width: 180px;">Choose online time:</DIV>
+<DIV class="left"><SELECT id="sel_time" data-theme="b" data-mini="true" 
+data-inline="true" data-native-menu="false" data-overlay-theme="b"><OPTION 
+  value="1800">Half an hour</OPTION>							 <OPTION value="3600" selected="">1 
+  hour</OPTION>							 <OPTION value="7200">2 hour</OPTION>							 <OPTION 
+  value="10800">3 hour</OPTION>							 <OPTION value="14400">4 hour</OPTION>
+  						 </SELECT>					 </DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV>Disconnected when you log out</DIV>
+<DIV style="text-align: center;"><A id="ar_mobileok" data-role="button" 
+data-theme="b" data-mini="true" data-inline="true">OK</A>					 <A id="ar_mobilecancel" 
+data-role="button" data-theme="b" data-mini="true" data-inline="true">Cancel</A>
+				 </DIV></DIV></DIV>
+<DIV id="div_notice" data-role="popup">
+<DIV data-role="header" data-theme="b">
+<H2>通知</H2></DIV>
+<DIV data-role="content">
+<DIV id="div_notice_content"></DIV>
+<DIV style="text-align: center;"><A id="ar_noticeok" data-role="button" 
+data-theme="b" data-mini="true" data-inline="true">知道了</A>
+				 </DIV><INPUT name="notice_timestamp" id="notice_timestamp" type="hidden" value="0">
+			 </DIV></DIV></DIV><!-- /page --> </BODY></HTML>
