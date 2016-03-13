@@ -1,10 +1,9 @@
-require('dotenv').config();
-const http = require("http");
+require( "dotenv" ).config();
+const http = require( "http" );
 const request = require( "superagent" );
 const charset = require( "superagent-charset" );
-charset(request);
-const rsa = require("./lib/rsa");
-const hex2b64 = require("./lib/base64");
+charset( request );
+const encrypt = require( "./lib" );
 const winston = require( "winston" );
 const logger = new winston.Logger( {
     transports: [
@@ -40,8 +39,6 @@ logger.info = function() {
 var totalTry = 0;
 const maxTotalTry = 10;
 var sessionCookies = [];
-const MODULE = "8099df2c3f092c05cccb6f24d5173860bf1772d7f7b8b60f5079a1b80700045d6f1b1c06d8b664515a4add8f3925e4fb053da7cd567b6be7c0d9f11218cf4e91";
-const EMPOENT = "10001";
 
 function get( endpoint, data, logword, addCookies, ignoreResBody ) {
     logger.info( "################## " + logword.toUpperCase() + " ###################" );
@@ -85,7 +82,7 @@ function get( endpoint, data, logword, addCookies, ignoreResBody ) {
 function autoConnect() {
     get( "https://account.cuc.edu.cn/connect/201303/index.jsp\?locale\=zh", {}, "init", false, true )
         .then( res => get( "https://account.cuc.edu.cn/notice/msg.jsp", { act: 0 }, "msg", false, true ) )
-        .then( res => get( "https://account.cuc.edu.cn/connect/ws/ws_login.jsp", { act: 2, userid: process.env.USER_ID, passwd: encrypt(process.env.PASSWORD) }, "login", true ) )
+        .then( res => get( "https://account.cuc.edu.cn/connect/ws/ws_login.jsp", { act: 2, userid: process.env.USER_ID, passwd: encrypt( process.env.PASSWORD ) }, "login", true ) )
         .then( res => get( "https://account.cuc.edu.cn/connect/ws/ws_action.jsp", { act: 4 }, "connect", true ) )
         .then( keepAlive );
 }
@@ -120,18 +117,5 @@ function reconnect() {
         process.exit();
     }
 }
-
-function encrypt(password) {
-  var rsaKey = new rsa.RSAKey();
-  rsaKey.setPublic(MODULE, EMPOENT);
-  var encryptPwd = rsaKey.encrypt(password);
-  logger.info('debug', encryptPwd);
-  if (encryptPwd) {
-    encryptPwd = rsa.linebrk(hex2b64(encryptPwd), 64);
-  } else {
-    encryptPwd = null;
-  }
-  return encryptPwd;
- }
 
 autoConnect();
