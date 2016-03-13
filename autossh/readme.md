@@ -1,0 +1,8 @@
+- 添加autossh用户 `sudo adduser --system --group --disabled-password autossh`
+- 进入autossh用户的ba是终端`sudo su - autossh -s /bin/bash`
+- autossh终端创建.ssh文件夹`mkdir .ssh`
+- 添加阿里服务器到已知host`sh-keyscan neomedia.top >> ~/.ssh/known_hosts`
+- 创建ssh秘钥`ssh-keygen -t rsa` (全部按回车)
+- 拷贝公有秘钥到阿里服务器`ssh-copy-id  -i ~/.ssh/id_rsa.pub autossh@neomedia.top` 密码询问师姐
+- 回到普通终端`exit`
+- 创建autossh自动启动文件`sudo vim /etc/init/autossh.conf`并拷贝内容
