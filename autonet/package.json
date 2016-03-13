@@ -8,6 +8,7 @@
     "test": "test"
   },
   "dependencies": {
+    "dotenv": "^2.0.0",
     "promise": "^7.1.1",
     "superagent": "^1.8.0",
     "superagent-charset": "^1.0.0",

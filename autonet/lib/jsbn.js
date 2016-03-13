@@ -1,3 +1,7 @@
+var navigator = {
+  appName: "nodejs"
+};
+
 // Copyright (c) 2005  Tom Wu
 // All Rights Reserved.
 // See "LICENSE" for details.
@@ -557,3 +561,5 @@ BigInteger.prototype.modPowInt = bnModPowInt;
 // "constants"
 BigInteger.ZERO = nbv(0);
 BigInteger.ONE = nbv(1);
+
+module.exports = BigInteger;
