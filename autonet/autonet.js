@@ -91,25 +91,35 @@ function autoConnect(){
 }
 
 function keepAlive(res){
-   get("https://account.cuc.edu.cn/connect/ws/ws_action.jsp", {act:6}, 'alive', true, true)
-   .then(res=>{
-       var json = JSON.parse(res.text);
-       logger.debug("ALIVE RESPONSE BODY", res.text);
-       if(json.success && json.hasLogin){
-           logger.info("ALIVE", "keep");
-           setTimeout(keepAlive, 60000);
-       }else{
-           if(totalTry < maxTotalTry){
-                totalTry++;
-                logger.info("ALIVE","reconnect "+ totalTry + "times");
-                sessionCookies = [];
-                autoConnect();
-           }else{
-                logger.info("ALIVE","exit : up to max("+ maxTotalTry+") attempt times");
-                process.exit();
-           }
-       }
-   })
+   if(!res.text.success){
+       reconnect();
+   }
+   else{
+        get("https://account.cuc.edu.cn/connect/ws/ws_action.jsp", {act:6}, 'alive', true, true)
+        .then(res=>{
+            var json = JSON.parse(res.text);
+            logger.info("ALIVE RESPONSE BODY", JSON.stringify(res.text));
+            if(json.success && json.hasLogin){
+                logger.info("ALIVE", "keep");
+                setTimeout(keepAlive, 60000);
+            }else{
+                reconnect();
+            }
+        })
+   }
+}
+
+function reconnect(){
+    if(totalTry < maxTotalTry){
+        totalTry++;
+        var waitingTime = Math.pow(2, totalTry);
+        logger.info("ALIVE","reconnect in "+ waitingTime + " minutes");
+        sessionCookies = [];
+        setTimeout(autoConnect, waitingTime * 60000)
+    }else{
+        logger.info("ALIVE","exit : up to max("+ maxTotalTry+") attempt times");
+        process.exit();
+    }
 }
 
 autoConnect();
