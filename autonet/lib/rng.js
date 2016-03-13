@@ -3,6 +3,9 @@
 // For best results, put code like
 // <body onClick='rng_seed_time();' onKeyPress='rng_seed_time();'>
 // in your main HTML document.
+const prng4 = require("./prng4");
+const rng_psize = prng4.rng_psize;
+const prng_newstate = prng4.prng_newstate;
 
 var rng_state;
 var rng_pool;
@@ -27,7 +30,7 @@ if(rng_pool == null) {
   rng_pool = new Array();
   rng_pptr = 0;
   var t;
-  if(navigator.appName == "Netscape" && navigator.appVersion < "5" && window.crypto) {
+  if(false) {
     // Extract entropy (256 bits) from NS4 RNG if available
     var z = window.crypto.random(32);
     for(t = 0; t < z.length; ++t)
@@ -66,3 +69,5 @@ function rng_get_bytes(ba) {
 function SecureRandom() {}
 
 SecureRandom.prototype.nextBytes = rng_get_bytes;
+
+module.exports = SecureRandom;
