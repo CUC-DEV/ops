@@ -6,3 +6,6 @@
 - 拷贝公有秘钥到阿里服务器`ssh-copy-id  -i ~/.ssh/id_rsa.pub autossh@neomedia.top` 密码询问师姐
 - 回到普通终端`exit`
 - 创建autossh自动启动文件`sudo vim /etc/init/autossh.conf`并拷贝内容
+- 根据实际情况修改autossh.conf,使用未占用的阿里服务器端口,比如3333代替2222
+- 启动autossh服务`sudo service autossh start`
+- 如有故障重启服务`sudo service autossh restart`
