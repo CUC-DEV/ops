@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "dotenv": "^2.0.0",
+    "pm2": "^1.0.2",
     "promise": "^7.1.1",
     "superagent": "^1.8.0",
     "superagent-charset": "^1.0.0",
@@ -16,6 +17,8 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "pm2 start autonet.js --name autonet --watch",
+    "stop": "pm2 stop autonet && pm2 delete autonet",
     "test": "mocha"
   },
   "keywords": [
