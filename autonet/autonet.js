@@ -37,8 +37,6 @@ var totalTry = 0;
 const maxTotalTry = 10;
 var sessionCookies = [];
 const account = "201010013082";
-
-//Var passwd='qiuzihe654321';
 const MODULE = "8099df2c3f092c05cccb6f24d5173860bf1772d7f7b8b60f5079a1b80700045d6f1b1c06d8b664515a4add8f3925e4fb053da7cd567b6be7c0d9f11218cf4e91";
 const EMPOENT = "10001";
 const encryptPwd = "PpW0BXegCg5Me+vRQ8cSLcXDMSw2eySHzG4J+lPUSOi6zqGPufwmc3bY4gs9eQxk\n2Z/0R9ck7dK+166EI5qL/A==";
