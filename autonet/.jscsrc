@@ -1,0 +1,4 @@
+{
+  "preset": "jquery",
+  "excludeFiles": ["lib/**","raw_pages/**"]
+}
