@@ -1,0 +1,9 @@
+- create image with command `docker build -t mengyu/gitblit:1.0 .`
+- run gitblit container `docker run -d --name gitblit -p 8443:443 -p 9090:8080 -p 9418:9418 -p 29418:29418 -v /opt/gitblit-data/:/opt/gitblit-data-temp mengyu/gitblit:1.0`
+- copy configuration file to data volume 
+  - go to container shell `docker exec -ti gitblit bash`
+  - copy file `cp -R /opt/gitblit-data/* /opt/gitblit-data-temp`
+  - exit shell and go back to host shell `exit`
+- stop gitblit `docker stop gitblit`
+- delete gitblit `docker rm gitblit`
+- run gitblit container `docker run -d --name gitblit -p 8443:443 -p 9090:8080 -p 9418:9418 -p 29418:29418 -v /opt/gitblit-data/:/opt/gitblit-data mengyu/gitblit:1.0`
