@@ -1,8 +1,8 @@
-# run command: docker run -d --name gitblit -p 8443:443 -p 8080:80 -p 9418:9418 -p 29418:29418 -v /mnt/gitblit-data/:/opt/gitblit-data jmoger/gitblit
+# run command: docker run -d --name gitblit -p 8443:443 -p 8080:8080 -p 9418:9418 -p 29418:29418 -v /mnt/gitblit-data/:/opt/gitblit-data mengyu/gitblit
 # Basics
 #
 from ubuntu:latest
-maintainer James Moger <james.moger@gitblit.com>
+maintainer Mengyu LIU <mengyu.dev@outlook.com>
 run apt-get update
 run apt-get install -q -y git-core redis-server
 
@@ -35,9 +35,9 @@ run mv /opt/gitblit/data/* /opt/gitblit-data
 # Note: we are writing to a different file here because sed doesn't like to the same file it
 # is streaming.  This is why the original properties file was renamed earlier.
 
-run echo "server.httpPort=80" >> /opt/gitblit-data/gitblit.properties
+run echo "server.httpPort=8080" >> /opt/gitblit-data/gitblit.properties
 run echo "server.httpsPort=443" >> /opt/gitblit-data/gitblit.properties
-run echo "server.redirectToHttpsPort=true" >> /opt/gitblit-data/gitblit.properties
+run echo "server.redirectToHttpsPort=false" >> /opt/gitblit-data/gitblit.properties
 run echo "web.enableRpcManagement=true" >> /opt/gitblit-data/gitblit.properties
 run echo "web.enableRpcAdministration=true" >> /opt/gitblit-data/gitblit.properties
 
